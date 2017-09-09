@@ -1,0 +1,469 @@
+FORMAT: 1A
+HOST: https://api.example.com
+
+# Blueprint Docs
+
+*This API blueprint is subject to change due to technology restrictions, performance optimizations or changing requirements.*
+
+## Authentication
+
++ This API uses [JWT](http://jwt.io/) for authentication,
++ Every token MUST be refreshed before its expiration time,
++ Token MUST be provided in `Authorization` header,
++ Toke MUST be provided for each request that requires authentication,
++ This API issues a **long-lived access tokens** for consumers. A long-lived JWT generally SHOULD lasts about **30 days**. If no requests are made, the token MUST expire and the user MUST go through the login flow again to get a new one.
+
+> A custom scheme like "JWT" seems to be more appropriate than coercing the OAuth2 Bearer scheme.
+
+### Example Header
+```
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhNnZoQW8zRkc3dDEiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE0NzA1OTg5NzIsImV4cCI6MTQ3MDY4NTM3Mn0.ltA9zZmJKszBJuuV7pTWtY7LzLXrRUfebJDhy_jGMeM
+```
+
+### Claims
++ `exp` - The exp ( *expiration time* ) claim identifies the expiration time on or after which the JWT MUST NOT be accepted for processing.
++ `iat` - The iat ( *issued at* ) claim identifies the time at which the JWT was issued.
++ `sub` - The aud ( *audience* ) claim identifies the subject of this token (for e.g. a user id).
++ `iss` - The iss ( *issuer* ) claim identifies the principal that issued the JWT.
+
+## Consumer Identification
+
+This API uses `User-Agent` and `Application-Id` headers to identify API consumer. `Application-Id` MUST contain an UUID that uniquely identifies a particular consumer installation.
+
+### Example Headers
+```
+User-Agent: Mozilla/5.0 (Linux; Android 4.4; Nexus 5 Build/_BuildID_) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36
+Application-Id: 6454d937-0a18-44a8-b482-bb48684f1ed4
+```
+
+## Filtering, Ordering, Pagination & Searching
+
+### Filtering
+
+This API can filter returned collections based on provided query parameters. Virtually any model field can be used as a filter.
+
+For example, when requesting a list of movies from the /movies endpoint, you may want to limit these to only those of drama genre. This could be accomplished with a request like `GET /movies?genre=drama`. Here, genre is a query parameter that implements a filter.
+
+### Ordering
+
+This API can sort returned collections. A generic query parameter `sort` is used to describe sorting rules. This parameter can take a list of comma separated field, each with a possible unary negative to imply descending sort order.
+
+E.g. `GET /movies?sort=-rating` - Retrieves a list of movies in descending order of user rating.
+
+By default all resources are ordered by their creation time, from newest to oldest.
+
+### Pagination
+
+This API uses the [Link header - RFC 5988](http://tools.ietf.org/html/rfc5988#page-6) to include pagination details.
+
+An example of a Link header is described in [GitHub documentation](https://developer.github.com/guides/traversing-with-pagination/).
+
+This API returns total count of paged resources in `Total-Count` HTTP header.
+
+### Searching
+
+This API uses a generic parameter `search` to expose a full text search mechanism.
+
+## HTTP Methods
+
+This API uses HTTP verbs (methods) as following:
+
++ `GET` - *Read* - used to **read** (or retrieve) a representation of a resource,
++ `POST` - *Create* - used to **create** new resources. In particular, it's used to create subordinate resources.
++ `PUT` - *Update/Replace* - used for **update** capabilities, PUT-ing to a known resource URI with the request body containing the newly-updated representation of the original resource. On successful request, replaces identified resource with the request body.
++ `PATCH` - *Update/Modify* - used for **modify** capabilities. The PATCH request only needs to contain the changes to the resource, not the complete resource.
++ `DELETE` - *Delete* - used to **delete** a resource identified by a URI.
+
+## Localization
+
+This API uses `Accept-Language` header to identify the locale.
+
+`Accept-Language: en`
+
+This header SHOULD be present in every request. If not, API MUST use the **english** language/locale.
+
+## Media Type
+
+Where applicable this API MUST use the JSON media-type. Requests with a message-body are using plain JSON to set or update resource states.
+
+`Content-type: application/json` and `Accept: application/json` headers SHOULD be set on all requests if not stated otherwise.
+
+## Notational Conventions
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC2119](https://www.ietf.org/rfc/rfc2119).
+
+## Representation of Date and Time
+
+All exchange of date and time-related data MUST be done according to ISO 8601 standard and stored in UTC.
+
+When returning date and time-related data `YYYY-MM-DDThh:mm:ss.SSSZ` format MUST be used.
+
+## Resource IDs
+
+This API uses short non-sequential url-friendly unique ids. Every resource id MUST consists of 9 url-friendly characters: `A-Z`, `a-z`, `0-9`, `_` and `-`.
+
+### Example
+`a6vhAo3FG7t1`
+
+## Status Codes and Errors
+
+This API uses HTTP status codes to communicate with the API consumer.
+
++ `200 OK` - Response to a successful GET, PUT, PATCH or DELETE.
++ `201 Created` - Response to a POST that results in a creation.
++ `204 No Content` - Response to a successful request that won't be returning a body (like a DELETE request).
++ `400 Bad Request` - Malformed request; form validation errors.
++ `401 Unauthorized` - When no or invalid authentication details are provided.
++ `403 Forbidden` - When authentication succeeded but authenticated user doesn't have access to the resource.
++ `404 Not Found` - When a non-existent resource is requested.
++ `405 Method Not Allowed` - Method not allowed.
++ `406 Not Acceptable` - Could not satisfy the request Accept header.
++ `415 Unsupported Media Type` - Unsupported media type in request.
+
+### Error response
+
+This API returns both, machine-readable error codes and human-readable error messages in response body when an error is encountered.
+
+#### Example
+
+##### Validation Error
+
+```js
+{
+    "statusCode": 400,
+    "error": "Bad Request",
+    "message": "Invalid query parameters",
+    "data": {
+        "code": 10003,
+        "validation": {
+            "details":[
+                {
+                    "message": "\"name\" is required",
+                    "path": "name",
+                    "type": "any.required",
+                    "context": {
+                        "key": "name"
+                    }
+                },{
+                    "message": "\"email\" must be a valid email",
+                    "path": "email",
+                    "type": "string.email",
+                    "context": {
+                        "value": "foo",
+                        "key": "email"
+                    }
+                }
+            ],
+            "source": "query",
+            "keys": [ "name","email" ]
+        }
+    }
+}
+```
+
+##### Generic Error
+
+```js
+{
+    "statusCode": 403,
+    "error": "Forbidden",
+    "message": "Your account is suspended and is not permitted to access this feature",
+    "data": {
+        "code": 13003
+    }
+}
+```
+
+#### Error Codes Dictionary
+
++ `10003` - Invalid query parameters
++ `10005` - Date is not in ISO 8601 standard
++ `10010` - Invalid Content-Type
++ `10011` - Invalid User-Agent
++ `10012` - Invalid or missing Application-Id
++ `11001` - Invalid or expired token
++ `11003` - Bad authentication data - *Method requires authentication but it was not presented or was wholly invalid.*
++ `11005` - Account not allowed to access this endpoint
++ `13003` - Your account is suspended and is not permitted to access this feature
+
+## Versioning
+
+This API uses `Api-Version` header to identify requested version. Every **minor** version SHOULD be backward compatible. However, **major** versions MAY introduce *breaking changes*.
+
+`Api-Version: 1.0.0`
+
+This header SHOULD be present in every request. If not, API MUST use the newest available major release.
+
+If requested version is not available, API SHOULD try to fall back to the next available minor release.
+
+# Group Authentication
+
+## User login [/auth/login]
+
+Access tokens are required to access nearly all endpoints of this API.
+
+### Retrieve a token [POST]
+
+Allows to retrieve a valid JSON Web Token for username and password.
+
+**Endpoint information**
+
+|                         |     |
+|-------------------------|-----|
+| Requires authentication | No  |
+| Has restricted scope    | No  |
+
++ Request (application/json)
+    + Attributes
+        + login: `john.doe@mail.com` (string, required) - User email address
+        + password: `QXR0mi38a2` (string, required) - User password
+
++ Response 200 (application/json)
+    + Attributes
+        + token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....` (string) - JSON Web Token.
+
+## Refresh a token [POST /auth/refresh-token]
+
+Allows to retrieve a new, valid JSON Web Token based on a valid JSON Web Token.
+
+Expired tokens MUST NOT be refreshed.
+
+**Endpoint information**
+
+|                         |     |
+|-------------------------|-----|
+| Requires authentication | Yes |
+| Has restricted scope    | No  |
+
++ Request
+    + Headers
+
+            Authorization: JWT <token>
+
++ Response 200 (application/json)
+    + Attributes
+        + token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....` (string) - New JWT
+
+## User registration [/auth/register]
+
+### Register a new user [POST]
+
+Creates a new user account.
+
++ Provided email address MUST be unique.
++ Passwords MUST have at least six characters.
++ Passwords MUST NOT contain the user name or parts of the user’s full name, such as his first name.
++ Passwords MUST use at least three of the four available character types: lowercase letters, uppercase letters, numbers, and symbols.
+
+After successful registration a confirmation email MUST be sent to provided address.
+
+**Endpoint information**
+
+|                         |     |
+|-------------------------|-----|
+| Requires authentication | No  |
+
+**Error codes**
+
+|       |         |                                             |
+|-------|---------| ------------------------------------------- |
+| `400` | `4001` | Password doesn't match password guidelines  |
+| `400` | `3001` | User already exists                         |
+
++ Request (application/json)
+    + Attributes
+        + email: `john.doe@mail.com` (string, required) - E-mail address.
+        + password: `QXR0mi38a2` (string, required) - User password.
+
++ Response 201
+
+# Group User
+
+## Current user profile [/users/me]
+
+Current user MUST be identifed by JWT provided in request header.
+
+### Retrieve profile of the current user [GET]
+
+Retrieves the profile of the current user.
+
+**Endpoint information**
+
+|                         |     |
+|-------------------------|-----|
+| Requires authentication | Yes |
+| Has restricted scope    | No  |
+
++ Request
+    + Headers
+
+            Authorization: JWT <token>
+
++ Response 200 (application/json)
+    + Attributes (User)
+
+### Partialy update a profile of the current user [PATCH]
+
+Updates a profile of the current user setting the values of the parameters passed. Any parameters not provided will be left unchanged.
+
+**Endpoint information**
+
+|                         |     |
+|-------------------------|-----|
+| Requires authentication | Yes |
+| Has restricted scope    | No  |
+
++ Request (application/json)
+    + Headers
+
+            Authorization: JWT <token>
+    + Attributes
+        + name: `Ben` (string) - First name of the user.
+
++ Response 200 (application/json)
+    + Attributes (User)
+
+## User password [/users/me/password]
+
+### Change a password of the current user [PUT]
+
+Changes user password.
+
+After password is changed all access tokens issued for this user prior to password change must be invalidated.
+
+**Endpoint information**
+
+|                         |     |
+|-------------------------|-----|
+| Requires authentication | Yes |
+| Has restricted scope    | No  |
+
+**Error codes**
+
+|       |         |                                           |
+|-------|---------| ----------------------------------------- |
+| `400` | `4001` | Password doesn't match password guidelines |
+
++ Request (application/json)
+    + Headers
+
+            Authorization: JWT <token>
+    + Attributes
+        + old_password: `secret` (string, required)
+        + new_password: `$3C6e7` (string, required)
+
++ Response 200
+    + Attributes
+        + token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` (string) - New JSON Web Token.
+
+## User avatar [/users/me/avatar]
+
+### Set user avatar [POST]
+
+Sets user avatar.
+
+Either upload the raw binary ( **media** parameter) of the file, or its base64-encoded contents ( **media_data** parameter). Use raw binary when possible, because base64 encoding results in larger file sizes.
+
+**Endpoint information**
+
+|                         |     |
+|-------------------------|-----|
+| Requires authentication | Yes |
+| Has restricted scope    | No  |
+
+**Error codes**
+
+|       |         |                       |
+|-------|---------| --------------------- |
+| `400` | `2001`  | File is too large     |
+| `400` | `2002`  | Unsupported file type |
+
++ Request (multipart/form-data)
+    + Headers
+
+            Authorization: JWT <token>
+
++ Response 200
+    + Attributes
+        + avatar: `https://...` (string) - Public download URL
+
+### Delete user avatar [DELETE]
+
+Restores user avatar to the default one.
+
+**Endpoint information**
+
+|                         |     |
+|-------------------------|-----|
+| Requires authentication | Yes |
+| Has restricted scope    | No  |
+
++ Request
+    + Headers
+
+            Authorization: JWT <token>
+
++ Response 204
+
+## Users [/users]
+
+### List all users [GET]
+
+Returns a list of users. The users are returned in sorter order, with the most recently created user accounts appearing first.
+
+|                         |     |
+|-------------------------|-----|
+| Requires authentication | Yes |
+| Has restricted scope    | No  |
+
++ Request
+    + Headers
+
+            Authorization: JWT <token>
+
++ Response 200 (application/json)
+    + Attributes (array[User])
+
+## User [/users/{id}]
+
++ Parameters
+    + id: `a6vhAo3FG7t1` (string) - id of the user.
+
+### Retrieve a user [GET]
+
+Retrieves the details of an existing user.
+
+|                         |     |
+|-------------------------|-----|
+| Requires authentication | Yes |
+| Has restricted scope    | No  |
+
+**Error codes**
+
+|       |         |                               |
+|-------|---------| ----------------------------- |
+| `400` | `1000`  | Referenced resource not found |
+
++ Request
+    + Headers
+
+            Authorization: JWT <token>
+
++ Response 200 (application/json)
+    + Attributes (User)
+
++ Response 404
+
+# Data Structures
+
+## Resource (object)
++ id: `a6vhAo3FG7t1` (string, fixed) - Short non-sequential url-friendly unique id.
++ createdAt: `2016-07-01T15:11:09.553Z` (string) - ISO Date/time string. When this resource was created.
++ updatedAt: `2016-07-01T15:11:09.553Z` (string) - ISO Date/time string. When this resource was last updated.
+
+## User (Resource)
++ email: `john.doe@mail.com` (string, required) - Login. Unique email address of the user.
++ facebookId: `888047057953991` (number, optional, nullable) - Facebook ID of the user if user account is linked to the Facebook account.
++ name: `John` (string, optional, nullable) - First name of the user.
++ surname: `Doe` (string, optional, nullable) - Last name of the user.
++ avatar (string, optional, nullable) - URL to user avatar.

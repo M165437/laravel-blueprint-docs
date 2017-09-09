@@ -1,0 +1,289 @@
+// Highlight.js theme
+@import "highlight";
+
+pre {
+    border: 1px solid #e6e6e6;
+}
+
+.sidebar {
+    display: none;
+    float: left;
+    margin: 0 15px;
+    will-change: min-height;
+
+    @media (min-width: 992px) {
+        display: block;
+        width: 293px;
+    }
+
+    @media (min-width: 1200px) {
+        display: block;
+        width: 360px;
+    }
+}
+
+.sidebar__inner {
+    position: relative;
+    transform: translate(0, 0); /* For browsers don't support translate3d. */
+    transform: translate3d(0, 0, 0);
+    will-change: position, transform;
+    overflow: auto;
+}
+
+.host {
+    margin-bottom: 22px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.main {
+    margin-left: 0;
+    padding: 0 15px;
+
+    @media (min-width: 992px) {
+        margin-left: 323px;
+    }
+
+    @media (min-width: 1200px) {
+        margin-left: 390px;
+    }
+}
+
+.panel {
+    border: 1px solid #d3e0e9;
+    overflow: hidden;
+}
+
+.panel-group .panel {
+    margin-bottom: 22px;
+    border-radius: 4px;
+}
+
+.panel-collapsable .panel-heading {
+    padding: 10px 15px;
+    color: #333333;
+    border-color: #d3e0e9;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    background-color: #f5f5f5;
+}
+
+.panel-collapsable .panel-title {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.panel-collapsable .panel-title a {
+    position: relative;
+}
+
+.panel-collapsable .panel-title a:active,
+.panel-collapsable .panel-title a:hover,
+.panel-collapsable .panel-title a:link,
+.panel-collapsable .panel-title a:visited {
+    text-decoration: none;
+}
+
+.panel-collapsable .panel-title a:after {
+    content: "-";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    font-weight: 200;
+    line-height: .8;
+}
+
+.panel-collapsable .panel-title a.collapsed:after {
+    content: "+";
+    line-height: 1;
+}
+
+.panel-collapsable .panel-body {
+    padding: 0;
+}
+
+.panel-body {
+    font-weight: 300;
+}
+
+.stacked-tabs {
+    border-radius: 4px;
+    font-weight: 300;
+}
+
+.stacked-tabs a {
+    border-bottom: 1px solid #e4ecf2;
+    border-left: 2px solid transparent;
+    color: #636b6f;
+}
+
+.stacked-tabs li a:active,
+.stacked-tabs li a:hover,
+.stacked-tabs li a:link,
+.stacked-tabs li a:visited {
+    background-color: white;
+}
+
+.stacked-tabs li a:hover {
+    border-left-color: #e4ecf2;
+}
+
+.stacked-tabs li:last-child a {
+    border-bottom: 0;
+}
+
+.panel-description .panel-title {
+    font-size: 36px;
+    line-height: 1.8;
+    color: #636b6f;
+}
+
+.panel-resource-group > .panel-heading .panel-title {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.panel-description h2 {
+    margin-top: 30px;
+    font-size: 23px;
+}
+
+.panel-description h3 {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.panel-description h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.panel-default > .panel-heading {
+    color: inherit;
+}
+
+.panel-action {
+    .panel-title {
+        font-size: 15px;
+        line-height: 1.6;
+
+        .name {
+            float: right;
+            padding: 3px 0;
+        }
+
+        .method {
+            display: inline-block;
+            margin-right: 12px;
+            padding: 3px 12px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 3px;
+
+            &.get, &.head, &.options {
+                color: #fff;
+                background-color: #337ab7;
+            }
+
+            &.put, &.patch {
+                color: #fff;
+                background-color: #ed9c28;
+            }
+
+            &.post {
+                color: #fff;
+                background-color: #5cb85c;
+            }
+
+            &.delete {
+                color: #fff;
+                background-color: #d9534f;
+            }
+        }
+    }
+
+    .method {
+        margin-right: 5px;
+        font-weight: 600;
+
+        &.get, &.head, &.options {
+            color: #337ab7;
+        }
+
+        &.put, &.patch {
+            color: #ed9c28;
+        }
+
+        &.post {
+            color: #5cb85c;
+        }
+
+        &.delete {
+            color: #d9534f;
+        }
+    }
+
+    .definition {
+        margin: 0 0 11px;
+
+        .uri {
+            color: #000;
+
+            .hostname {
+                color: #636b6f;
+            }
+        }
+    }
+
+    .panel-footer {
+        background-color: #fff;
+
+        .nav-pills > li.active > a,
+        //.nav-pills>li.active>a:focus,
+        .nav-pills > li.active > a:hover {
+            color: #216a94;
+            background-color: #f5f5f5;
+        }
+
+        .tab-pane.active > :first-child {
+            margin-top: 15px;
+        }
+    }
+}
+
+.main ul li p {
+    margin: 0;
+}
+
+.main table {
+    margin: 0 0 11px;
+}
+
+.main table th,
+.main table td {
+    padding: 6px 12px;
+    vertical-align: top;
+    border: 1px solid #e6e6e6;
+}
+
+.panel-collapsable .panel-title a:after {
+    content: "-";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    font-weight: 200;
+    line-height: .8;
+}
+
+.main .parameters table {
+    width: 100%;
+    margin-top: 10px;
+
+    p {
+        margin: 0;
+    }
+}
