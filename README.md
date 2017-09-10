@@ -1,4 +1,8 @@
+![](https://i.imgur.com/eHsSKuH.png =880x513)
+
 # API Blueprint Renderer for Laravel
+
+[![Latest Stable Version](https://poser.pugx.org/m165437/laravel-blueprint-docs/v/stable)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![Total Downloads](https://poser.pugx.org/m165437/laravel-blueprint-docs/downloads)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![Latest Unstable Version](https://poser.pugx.org/m165437/laravel-blueprint-docs/v/unstable)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![License](https://poser.pugx.org/m165437/laravel-blueprint-docs/license)](https://packagist.org/packages/m165437/laravel-blueprint-docs)
 
 This Laravel package *Blueprint Docs* renders your [API Blueprint](http://apiblueprint.org/). It comes with a standard theme that you can customize via Blade templates. Install the package and find your rendered documentation at route `/api-documentation`.
 
