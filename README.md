@@ -1,4 +1,4 @@
-![](https://i.imgur.com/eHsSKuH.png =880x513)
+![](https://i.imgur.com/fnkIhTe.png)
 
 # API Blueprint Renderer for Laravel
 
