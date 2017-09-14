@@ -6,6 +6,8 @@
 
 This Laravel package *Blueprint Docs* renders your [API Blueprint](http://apiblueprint.org/). It comes with a standard theme that you can customize via Blade templates. Install the package and find your rendered documentation at route `/api-documentation`.
 
+**Example output**: If used with [API Blueprint boilerplate](https://github.com/jsynowiec/api-blueprint-boilerplate), this would be [*Blueprint Docs'* output](https://m165437.github.io/laravel-blueprint-docs).
+
 API Blueprint is a Markdown-based document format that lets you write API descriptions and documentation in a simple and straightforward way. Currently supported is [API Blueprint format 1A](https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md).
 
 ## Requirements
