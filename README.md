@@ -32,7 +32,7 @@ Next, register its service provider (Laravel >= 5.5 does this automatically via 
 // config/app.php
 'providers' => [
     ...
-    M165437\BlueprintDoc\BlueprintDocServiceProvider::class,
+    M165437\BlueprintDocs\BlueprintDocsServiceProvider::class,
 ];
 ```
 
