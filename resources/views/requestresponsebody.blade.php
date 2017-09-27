@@ -10,3 +10,6 @@
     <p><strong>Schema</strong></p>
     <pre><code>{{ $requestresponse->messageBodySchema->body }}</code></pre>
 @endif
+@if (! $requestresponse->hasContent)
+    <p><strong>This has no content.</strong></p>
+@endif

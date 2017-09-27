@@ -32,6 +32,11 @@ class HttpRequest extends Mapping
     public $messageBodySchema;
 
     /**
+     * @var boolean
+     */
+    public $hasContent;
+
+    /**
      * Request constructor
      *
      * @param mixed $element
@@ -55,6 +60,7 @@ class HttpRequest extends Mapping
         $this->contentType = $this->reynaldo->getContentType();
         $this->messageBody = $this->mapMessageBody();
         $this->messageBodySchema = $this->mapMessageBodySchema();
+        $this->hasContent = $this->headers->count() || $this->messageBody || $this->messageBodySchema;
     }
 
     /**

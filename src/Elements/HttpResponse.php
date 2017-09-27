@@ -32,6 +32,11 @@ class HttpResponse extends Mapping
     public $dataStructure;
 
     /**
+     * @var boolean
+     */
+    public $hasContent;
+
+    /**
      * Response constructor
      *
      * @param mixed $element
@@ -55,6 +60,7 @@ class HttpResponse extends Mapping
         $this->messageBody = $this->mapMessageBody();
         $this->messageBodySchema = $this->mapMessageBodySchema();
         $this->dataStructure = $this->reynaldo->getDataStructure();
+        $this->hasContent = $this->headers->count() || $this->messageBody || $this->messageBodySchema;
     }
 
     /**
