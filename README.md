@@ -2,7 +2,7 @@
 
 # API Blueprint Renderer for Laravel
 
-[![Latest Stable Version](https://poser.pugx.org/m165437/laravel-blueprint-docs/v/stable)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![Total Downloads](https://poser.pugx.org/m165437/laravel-blueprint-docs/downloads)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![Latest Unstable Version](https://poser.pugx.org/m165437/laravel-blueprint-docs/v/unstable)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![License](https://poser.pugx.org/m165437/laravel-blueprint-docs/license)](https://packagist.org/packages/m165437/laravel-blueprint-docs)
+[![Latest Stable Version](https://poser.pugx.org/m165437/laravel-blueprint-docs/v/stable)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![Total Downloads](https://poser.pugx.org/m165437/laravel-blueprint-docs/downloads)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![Latest Unstable Version](https://poser.pugx.org/m165437/laravel-blueprint-docs/v/unstable)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![License](https://poser.pugx.org/m165437/laravel-blueprint-docs/license)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![Twitter](https://img.shields.io/badge/twitter-@M165437-blue.svg?style=flat&colorB=00aced)](http://twitter.com/M165437)
 
 This Laravel package *Blueprint Docs* renders your [API Blueprint](http://apiblueprint.org/). It comes with a standard theme that you can customize via Blade templates. Install the package and find your rendered documentation at route `/api-documentation`.
 
