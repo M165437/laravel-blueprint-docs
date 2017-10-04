@@ -70,13 +70,12 @@ class HrefVariable extends Mapping
         $this->required = $this->reynaldo->required;
         $this->example = $this->reynaldo->example;
         $this->defaultValue = $this->mapDefault($this->reynaldo->default);
-        // Reynaldo doesn't support parameter members yet. I've submitted a pull request.
-        $this->values = []; // $this->reynaldo->values;
+        $this->values = $this->reynaldo->values;
     }
 
     /**
      * Map default value to string
-     * 
+     *
      * @param mixed $default
      * @return string
      */

@@ -39,26 +39,10 @@
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="{{ $action->elementId }}-request">
                         @include('blueprintdocs::requestresponsebody', ['requestresponse' => $action->examples->first()->get('request')])
-                        {{--@if ($action->examples->first()->get('request')->headers->count())--}}
-                            {{--<p><strong>Headers</strong></p>--}}
-                            {{--<pre><code>@foreach($action->examples->first()->get('request')->headers as $key => $value){{ $key . ': ' . $value }}<br>@endforeach</code></pre>--}}
-                        {{--@endif--}}
                     </div>
                     @foreach($action->examples->pluck('response') as $response)
                         <div role="tabpanel" class="tab-pane" id="{{ $action->elementId }}-response-{{ $response->statusCode }}">
                             @include('blueprintdocs::requestresponsebody', ['requestresponse' => $response])
-                            {{--@if ($response->headers->count())--}}
-                                {{--<p><strong>Headers</strong></p>--}}
-                                {{--<pre><code>@foreach($response->headers as $key => $value){{ $key . ': ' . $value }}<br>@endforeach</code></pre>--}}
-                            {{--@endif--}}
-                            {{--@if ($response->messageBody)--}}
-                                {{--<p><strong>Body</strong></p>--}}
-                                {{--<pre><code>{{ $response->messageBody->body }}</code></pre>--}}
-                            {{--@endif--}}
-                            {{--@if ($response->messageBodySchema)--}}
-                                {{--<p><strong>Schema</strong></p>--}}
-                                {{--<pre><code>{{ $response->messageBodySchema->body }}</code></pre>--}}
-                            {{--@endif--}}
                         </div>
                     @endforeach
                 </div>
