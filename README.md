@@ -1,8 +1,14 @@
-![](https://i.imgur.com/fnkIhTe.png)
+![Blueprint Docs](https://i.imgur.com/m6Abbmc.png)
+
+<p align="center">
+    <a href="https://packagist.org/packages/m165437/laravel-blueprint-docs"><img src="https://poser.pugx.org/m165437/laravel-blueprint-docs/v/stable" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/m165437/laravel-blueprint-docs"><img src="https://poser.pugx.org/m165437/laravel-blueprint-docs/downloads" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/m165437/laravel-blueprint-docs"><img src="https://poser.pugx.org/m165437/laravel-blueprint-docs/v/unstable" alt="Latest Unstable Version"></a>
+    <a href="https://packagist.org/packages/m165437/laravel-blueprint-docs"><img src="https://poser.pugx.org/m165437/laravel-blueprint-docs/license" alt="License"></a>
+    <a href="http://twitter.com/M165437"><img src="https://img.shields.io/badge/twitter-@M165437-blue.svg?style=flat&colorB=00aced" alt="Twitter"></a>
+</p>
 
 # API Blueprint Renderer for Laravel
-
-[![Latest Stable Version](https://poser.pugx.org/m165437/laravel-blueprint-docs/v/stable)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![Total Downloads](https://poser.pugx.org/m165437/laravel-blueprint-docs/downloads)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![Latest Unstable Version](https://poser.pugx.org/m165437/laravel-blueprint-docs/v/unstable)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![License](https://poser.pugx.org/m165437/laravel-blueprint-docs/license)](https://packagist.org/packages/m165437/laravel-blueprint-docs) [![Twitter](https://img.shields.io/badge/twitter-@M165437-blue.svg?style=flat&colorB=00aced)](http://twitter.com/M165437)
 
 This Laravel package *Blueprint Docs* renders your [API Blueprint](http://apiblueprint.org/). It comes with a standard theme that you can customize via Blade templates. Install the package and find your rendered documentation at route `/api-documentation`.
 
@@ -95,7 +101,7 @@ php artisan vendor:publish --provider="M165437\BlueprintDocs\BlueprintDocsServic
 
 ## Credits
 
-This package relies heavily on work done by [Hendrik Maus](https://github.com/hendrikmaus), namely his [Drafter PHP Wrapper](https://github.com/hendrikmaus/drafter-php) and [Reynaldo](https://github.com/hendrikmaus/reynaldo), it's inspired by [Aglio](https://github.com/danielgtaylor/aglio), an API Blueprint renderer written in Node.js, and provides the [API Blueprint boilerplate](https://github.com/jsynowiec/api-blueprint-boilerplate) as an example.
+This package relies heavily on work done by [Hendrik Maus](https://github.com/hendrikmaus), namely his [Drafter PHP Wrapper](https://github.com/hendrikmaus/drafter-php) and [Reynaldo](https://github.com/hendrikmaus/reynaldo), it's inspired by [Aglio](https://github.com/danielgtaylor/aglio), an API Blueprint renderer written in Node.js, and provides the [API Blueprint boilerplate](https://github.com/jsynowiec/api-blueprint-boilerplate) as an example. The header is the modified part of a [graphic created by Iconicbestiary](http://www.freepik.com/free-vector/hands-signing-house-or-apartment-contract_1311557.htm), via [Freepik.com](http://www.freepik.com).
 
 ## License
 
