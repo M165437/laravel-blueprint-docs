@@ -105,4 +105,4 @@ This package relies heavily on work done by [Hendrik Maus](https://github.com/he
 
 ## License
 
-Blueprint Docs is licensed under the MIT License (MIT). Please see the [LICENCE](LICENSE.md) file for more information.
+Blueprint Docs is licensed under the MIT License (MIT). Please see the [LICENSE](LICENSE.md) file for more information.
