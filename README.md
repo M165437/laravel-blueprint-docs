@@ -99,6 +99,10 @@ To customize the default theme, publish its views to `views/vendor/blueprintdocs
 php artisan vendor:publish --provider="M165437\BlueprintDocs\BlueprintDocsServiceProvider" --tag="views"
 ```
 
+## Contributing
+
+Thank you for considering contributing to this package! Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
 ## Credits
 
 This package relies heavily on work done by [Hendrik Maus](https://github.com/hendrikmaus), namely his [Drafter PHP Wrapper](https://github.com/hendrikmaus/drafter-php) and [Reynaldo](https://github.com/hendrikmaus/reynaldo), it's inspired by [Aglio](https://github.com/danielgtaylor/aglio), an API Blueprint renderer written in Node.js, and provides the [API Blueprint boilerplate](https://github.com/jsynowiec/api-blueprint-boilerplate) as an example. The header is the modified part of a [graphic created by Iconicbestiary](http://www.freepik.com/free-vector/hands-signing-house-or-apartment-contract_1311557.htm), via [Freepik.com](http://www.freepik.com).
