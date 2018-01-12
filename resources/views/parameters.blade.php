@@ -4,42 +4,42 @@
 <div class="parameters">
     <table>
         <thead>
-            <tr>
-                <th></th>
-                <th></th>
-            </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
         </thead>
         <tbody>
-            @foreach ($action->parameters as $parameter)
-                <tr>
-                    <td>
-                        <strong>{{ $parameter->name }}</strong>
-                    </td>
-                    <td>
-                        <p>
-                            <code>string</code>
-                            @if ($parameter->required)
-                                &nbsp;({{ $parameter->required }})
-                            @endif
-                            @if ($parameter->defaultValue)
-                                &nbsp;<span class="text-muted">Default: {{ $parameter->defaultValue }}</span>
-                            @endif
-                            @if ($parameter->example)
-                                &nbsp;<span class="text-muted">Example: {{ $parameter->example }}</span>
-                            @endif
-                        </p>
-                        {!! $parameter->descriptionHtml !!}
-                        @if (!empty($parameter->values))
-                            <p class="choices">
-                                <strong>Choices:</strong>&nbsp;
-                                @foreach($parameter->values as $value)
-                                    <code>{{ $value }}</code>&#32;
-                                @endforeach
-                            </p>
+        @foreach ($action->parameters as $parameter)
+            <tr>
+                <td>
+                    <strong>{{ $parameter->name }}</strong>
+                </td>
+                <td>
+                    <p>
+                        <code>string</code>
+                        @if ($parameter->required)
+                            &nbsp;({{ $parameter->required }})
                         @endif
-                    </td>
-                </tr>
-            @endforeach
+                        @if ($parameter->defaultValue)
+                            &nbsp;<span class="text-muted">Default: {{ $parameter->defaultValue }}</span>
+                        @endif
+                        @if ($parameter->example)
+                            &nbsp;<span class="text-muted">Example: {{ urldecode($parameter->example) }}</span>
+                        @endif
+                    </p>
+                    {!! $parameter->descriptionHtml !!}
+                    @if (!empty($parameter->values))
+                        <p class="choices">
+                            <strong>Choices:</strong>&nbsp;
+                            @foreach($parameter->values as $value)
+                                <code>{{ $value }}</code>&#32;
+                            @endforeach
+                        </p>
+                    @endif
+                </td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
 </div>

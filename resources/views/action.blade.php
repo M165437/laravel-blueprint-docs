@@ -2,7 +2,7 @@
     <div class="panel-heading">
         <h4 class="panel-title" id="{{ $action->elementId }}">
             <div class="method {{ $action->methodLower }}">{{ $action->method }}</div>
-            <code class="uri">{{ $action->uriTemplate }}</code>
+            <code class="uri">{!! urldecode($action->uriTemplate) !!}</code>
             <div class="name">{{ $action->name }}</div>
         </h4>
     </div>
@@ -13,7 +13,7 @@
         <div class="definition">
             <span class="method {{ $action->methodLower }}">{{ $action->method }}</span>
             <span class="uri">
-                <span class="hostname">{{ $api->host }}</span>{!! $action->colorizedUriTemplate !!}
+                <span class="hostname">{{ $api->host }}</span>{!! urldecode($action->colorizedUriTemplate) !!}
             </span>
         </div>
 

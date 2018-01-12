@@ -1,5 +1,5 @@
 <h3 id="{{ $resource->elementId }}">
-    {{ $resource->name }}
+    {{ $resource->name ?: 'Resource' }}
 </h3>
 {!! $resource->descriptionHtml !!}
 

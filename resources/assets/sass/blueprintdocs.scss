@@ -114,7 +114,7 @@ pre {
 }
 
 .stacked-tabs a {
-    border-bottom: 1px solid #e4ecf2;
+    border-top: 1px solid #e4ecf2;
     border-left: 2px solid transparent;
     color: #636b6f;
 }
@@ -130,8 +130,13 @@ pre {
     border-left-color: #e4ecf2;
 }
 
-.stacked-tabs li:last-child a {
-    border-bottom: 0;
+.stacked-tabs ul li a {
+    padding-left: 30px;
+}
+
+.stacked-tabs li .method {
+    display: inline-block;
+    float: right;
 }
 
 .panel-description .panel-title {
@@ -205,27 +210,6 @@ pre {
         }
     }
 
-    .method {
-        margin-right: 5px;
-        font-weight: 600;
-
-        &.get, &.head, &.options {
-            color: #337ab7;
-        }
-
-        &.put, &.patch {
-            color: #ed9c28;
-        }
-
-        &.post {
-            color: #5cb85c;
-        }
-
-        &.delete {
-            color: #d9534f;
-        }
-    }
-
     .definition {
         margin: 0 0 11px;
 
@@ -285,5 +269,26 @@ pre {
 
     p {
         margin: 0;
+    }
+}
+
+.method {
+    margin-right: 5px;
+    font-weight: 600;
+
+    &.get, &.head, &.options {
+        color: #337ab7;
+    }
+
+    &.put, &.patch {
+        color: #ed9c28;
+    }
+
+    &.post {
+        color: #5cb85c;
+    }
+
+    &.delete {
+        color: #d9534f;
     }
 }

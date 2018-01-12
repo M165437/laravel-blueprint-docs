@@ -37,12 +37,35 @@
                 <div class="tabs">
                     <ul class="nav stacked-tabs" role="tablist">
                         @foreach ($resourceGroup->resources as $resource)
-                            @continue($resource->name === '')
-                            <li role="presentation">
-                                <a href="{{ $resource->elementLink }}">
-                                    {{ $resource->name }}
-                                </a>
-                            </li>
+                            @if (config('blueprintdocs.condense_navigation'))
+                                <li role="presentation" class="resource">
+                                    <a href="{{ $resource->elementLink }}">{{ $resource->name ?: 'Resource' }}</a>
+                                </li>
+                            @else
+                                @if ($resource->actions->count() > 1)
+                                    <li role="presentation" class="resource">
+                                        <a href="{{ $resource->elementLink }}">{{ $resource->name ?: 'Resource' }}</a>
+                                        <ul class="nav stacked-tabs">
+                                            @foreach ($resource->actions as $action)
+                                                <li role="presentation">
+                                                    <a href="{{ $action->elementLink }}">
+                                                        <span class="method {{ $action->methodLower }}">{{ $action->method }}</span>
+                                                        <span class="name">{{ $action->name ?: $action->method . ' ' . $action->uriTemplate }}</span>
+                                                    </a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                @else
+                                    @php ($action = $resource->actions[0])
+                                    <li role="presentation">
+                                        <a href="{{ $action->elementLink }}">
+                                            <span class="method {{ $action->methodLower }}">{{ $action->method }}</span>
+                                            <span class="name">{{ $action->name ?: $resource->name ?: $action->method . ' ' . $action->uriTemplate }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+                            @endif
                         @endforeach
                     </ul>
                 </div>

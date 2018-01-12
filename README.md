@@ -64,7 +64,7 @@ To adjust Blueprint Docs' configuration, publish its config file to `config/blue
 php artisan vendor:publish --provider="M165437\BlueprintDocs\BlueprintDocsServiceProvider" --tag="config"
 ```
 
-The default contents of the configuration file looks like this:
+The default contents of the configuration file look like this:
 
 ```php
 return [
@@ -81,6 +81,8 @@ return [
     */
 
     'route' => 'api-documentation',
+
+    'condense_navigation' => false,
 
     'blueprint_file' => base_path('blueprint.apib'),
 

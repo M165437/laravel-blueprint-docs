@@ -15,6 +15,8 @@ return [
 
     'route' => 'api-documentation',
 
+    'condense_navigation' => false,
+
     'blueprint_file' => base_path('blueprint.apib'),
 
     'drafter' => base_path('vendor/bin/drafter')
