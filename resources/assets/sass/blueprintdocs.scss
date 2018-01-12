@@ -111,12 +111,21 @@ pre {
 .stacked-tabs {
     border-radius: 4px;
     font-weight: 300;
+
+    .resource-header {
+        font-weight: 600;
+    }
 }
 
 .stacked-tabs a {
     border-bottom: 1px solid #e4ecf2;
     border-left: 2px solid transparent;
     color: #636b6f;
+}
+
+.stacked-tabs li .method {
+    display: inline-block;
+    width: 55px;
 }
 
 .stacked-tabs li a:active,
@@ -204,8 +213,6 @@ pre {
             }
         }
     }
-
-
 
     .definition {
         margin: 0 0 11px;
