@@ -38,11 +38,19 @@
                     <ul class="nav stacked-tabs" role="tablist">
                         @foreach ($resourceGroup->resources as $resource)
                             @continue($resource->name === '')
-                            <li role="presentation">
-                                <a href="{{ $resource->elementLink }}">
-                                    {{ $resource->name }}
-                                </a>
-                            </li>
+                            @if (strtolower($resourceGroup->name) !== strtolower($resource->name))
+                                <li role="presentation" class="resource-header">
+                                    <a href="{{ $resource->elementLink }}">{{ $resource->name }}</a>
+                                </li>
+                            @endif
+                            @foreach ($resource->actions as $action)
+                                <li role="presentation">
+                                    <a href="{{ $action->elementLink }}">
+                                        <span class="method {{ $action->methodLower }}">{{ $action->method }}</span>
+                                        <span class="name">{{ $action->name }}</span>
+                                    </a>
+                                </li>
+                            @endforeach
                         @endforeach
                     </ul>
                 </div>
