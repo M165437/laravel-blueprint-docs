@@ -11,10 +11,11 @@
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
-    "cross-env": "^3.2.3",
+    "cross-env": "^5.1.4",
+    "css-element-queries": "^1.0.2",
     "highlight.js": "^9.12.0",
-    "jquery": "^3.1.1",
-    "laravel-mix": "0.*",
-    "sticky-sidebar": "^2.0.1"
+    "jquery": "^3.3.1",
+    "laravel-mix": "^2.1.0",
+    "sticky-sidebar": "^3.3.1"
   }
 }
