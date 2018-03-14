@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,7 +24,7 @@
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="https://m165437.github.io/laravel-blueprint-docs">
                     Blueprint Docs
                 </a>
             </div>
@@ -35,7 +35,7 @@
         <div class="row content-wrapper">
 
             <!-- Sidebar -->
-            <div class="sidebar"><div class="inner-wrapper-sticky">
+            <div class="sidebar">
                 <div class="sidebar__inner">
 
                     <!-- Navigation -->
@@ -53,57 +53,57 @@
             <div class="tabs">
                 <ul class="nav stacked-tabs" role="tablist">
                                             <li role="presentation">
-                            <a href="#description-authentication">
+                            <a href="#description-authentication-0">
                                 Authentication
                             </a>
                         </li>
                                             <li role="presentation">
-                            <a href="#description-consumer-identification">
+                            <a href="#description-consumer-identification-3">
                                 Consumer Identification
                             </a>
                         </li>
                                             <li role="presentation">
-                            <a href="#description-filtering-ordering-pagination-searching">
+                            <a href="#description-filtering-ordering-pagination-searching-5">
                                 Filtering, Ordering, Pagination &amp; Searching
                             </a>
                         </li>
                                             <li role="presentation">
-                            <a href="#description-http-methods">
+                            <a href="#description-http-methods-10">
                                 HTTP Methods
                             </a>
                         </li>
                                             <li role="presentation">
-                            <a href="#description-localization">
+                            <a href="#description-localization-11">
                                 Localization
                             </a>
                         </li>
                                             <li role="presentation">
-                            <a href="#description-media-type">
+                            <a href="#description-media-type-12">
                                 Media Type
                             </a>
                         </li>
                                             <li role="presentation">
-                            <a href="#description-notational-conventions">
+                            <a href="#description-notational-conventions-13">
                                 Notational Conventions
                             </a>
                         </li>
                                             <li role="presentation">
-                            <a href="#description-representation-of-date-and-time">
+                            <a href="#description-representation-of-date-and-time-14">
                                 Representation of Date and Time
                             </a>
                         </li>
                                             <li role="presentation">
-                            <a href="#description-resource-ids">
+                            <a href="#description-resource-ids-15">
                                 Resource IDs
                             </a>
                         </li>
                                             <li role="presentation">
-                            <a href="#description-status-codes-and-errors">
+                            <a href="#description-status-codes-and-errors-17">
                                 Status Codes and Errors
                             </a>
                         </li>
                                             <li role="presentation">
-                            <a href="#description-versioning">
+                            <a href="#description-versioning-23">
                                 Versioning
                             </a>
                         </li>
@@ -124,17 +124,30 @@
             <div class="panel-body collapse in" role="tabpanel" aria-labelledby="panel-heading-1" id="collapse-1">
                 <div class="tabs">
                     <ul class="nav stacked-tabs" role="tablist">
-                                                                                <li role="presentation">
-                                <a href="#authentication-user-login">
-                                    User login
-                                </a>
-                            </li>
-                                                                                <li role="presentation">
-                                <a href="#authentication-user-registration">
-                                    User registration
-                                </a>
-                            </li>
-                                            </ul>
+                                                                                                                        <li role="presentation" class="resource">
+                                        <a href="#authentication-user-login">User login</a>
+                                        <ul class="nav stacked-tabs">
+                                                                                            <li role="presentation">
+                                                    <a href="#authentication-user-login-retrieve-a-token">
+                                                        <span class="method post">POST</span>
+                                                        <span class="name">Retrieve a token</span>
+                                                    </a>
+                                                </li>
+                                                                                            <li role="presentation">
+                                                    <a href="#authentication-user-login-refresh-a-token">
+                                                        <span class="method post">POST</span>
+                                                        <span class="name">Refresh a token</span>
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                    </li>
+                                                                                                                                                                                                                        <li role="presentation">
+                                        <a href="#authentication-user-registration-register-a-new-user">
+                                            <span class="method post">POST</span>
+                                            <span class="name">Register a new user</span>
+                                        </a>
+                                    </li>
+                                                                                                        </ul>
                 </div>
             </div>
         </div>
@@ -150,42 +163,70 @@
             <div class="panel-body collapse in" role="tabpanel" aria-labelledby="panel-heading-2" id="collapse-2">
                 <div class="tabs">
                     <ul class="nav stacked-tabs" role="tablist">
-                                                                                <li role="presentation">
-                                <a href="#user-current-user-profile">
-                                    Current user profile
-                                </a>
-                            </li>
-                                                                                <li role="presentation">
-                                <a href="#user-user-password">
-                                    User password
-                                </a>
-                            </li>
-                                                                                <li role="presentation">
-                                <a href="#user-user-avatar">
-                                    User avatar
-                                </a>
-                            </li>
-                                                                                <li role="presentation">
-                                <a href="#user-users">
-                                    Users
-                                </a>
-                            </li>
-                                                                                <li role="presentation">
-                                <a href="#user-user">
-                                    User
-                                </a>
-                            </li>
-                                            </ul>
+                                                                                                                        <li role="presentation" class="resource">
+                                        <a href="#user-current-user-profile">Current user profile</a>
+                                        <ul class="nav stacked-tabs">
+                                                                                            <li role="presentation">
+                                                    <a href="#user-current-user-profile-retrieve-profile-of-the-current-user">
+                                                        <span class="method get">GET</span>
+                                                        <span class="name">Retrieve profile of the current user</span>
+                                                    </a>
+                                                </li>
+                                                                                            <li role="presentation">
+                                                    <a href="#user-current-user-profile-partialy-update-a-profile-of-the-current-user">
+                                                        <span class="method patch">PATCH</span>
+                                                        <span class="name">Partialy update a profile of the current user</span>
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                    </li>
+                                                                                                                                                                                                                        <li role="presentation">
+                                        <a href="#user-user-password-change-a-password-of-the-current-user">
+                                            <span class="method put">PUT</span>
+                                            <span class="name">Change a password of the current user</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li role="presentation" class="resource">
+                                        <a href="#user-user-avatar">User avatar</a>
+                                        <ul class="nav stacked-tabs">
+                                                                                            <li role="presentation">
+                                                    <a href="#user-user-avatar-set-user-avatar">
+                                                        <span class="method post">POST</span>
+                                                        <span class="name">Set user avatar</span>
+                                                    </a>
+                                                </li>
+                                                                                            <li role="presentation">
+                                                    <a href="#user-user-avatar-delete-user-avatar">
+                                                        <span class="method delete">DELETE</span>
+                                                        <span class="name">Delete user avatar</span>
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                    </li>
+                                                                                                                                                                                                                        <li role="presentation">
+                                        <a href="#user-users-list-all-users">
+                                            <span class="method get">GET</span>
+                                            <span class="name">List all users</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                                                        <li role="presentation">
+                                        <a href="#user-user-retrieve-a-user">
+                                            <span class="method get">GET</span>
+                                            <span class="name">Retrieve a user</span>
+                                        </a>
+                                    </li>
+                                                                                                        </ul>
                 </div>
             </div>
         </div>
     </div>
+
                     <!-- Host -->
                     <p class="host">
-                        <a href="https://api.example.com/">https://api.example.com</a>
+                        <a href="https://api.example.com">https://api.example.com</a>
                     </p>
                 </div>
-            <object style="display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%;overflow: hidden; pointer-events: none; z-index: -1;" type="text/html"></object></div></div>
+            </div>
 
             <!-- Content -->
             <div class="main">
@@ -197,7 +238,7 @@
                     </div>
                     <div class="panel-body">
                         <p><em>This API blueprint is subject to change due to technology restrictions, performance optimizations or changing requirements.</em></p>
-<h2 id="description-authentication">Authentication</h2>
+<h2 id="description-authentication-0">Authentication</h2>
 <ul>
 <li>
 <p>This API uses <a href="http://jwt.io/">JWT</a> for authentication,</p>
@@ -211,14 +252,16 @@
 <li>
 <p>Toke MUST be provided for each request that requires authentication,</p>
 </li>
-<li>This API issues a <strong>long-lived access tokens</strong> for consumers. A long-lived JWT generally SHOULD lasts about <strong>30 days</strong>. If no requests are made, the token MUST expire and the user MUST go through the login flow again to get a new one.</li>
+<li>
+<p>This API issues a <strong>long-lived access tokens</strong> for consumers. A long-lived JWT generally SHOULD lasts about <strong>30 days</strong>. If no requests are made, the token MUST expire and the user MUST go through the login flow again to get a new one.</p>
+</li>
 </ul>
 <blockquote>
-<p>A custom scheme like "JWT" seems to be more appropriate than coercing the OAuth2 Bearer scheme.</p>
+<p>A custom scheme like &quot;JWT&quot; seems to be more appropriate than coercing the OAuth2 Bearer scheme.</p>
 </blockquote>
-<h3 id="description-example-header">Example Header</h3>
-<pre><code class="hljs http"><span class="hljs-attribute">Authorization</span>: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhNnZoQW8zRkc3dDEiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE0NzA1OTg5NzIsImV4cCI6MTQ3MDY4NTM3Mn0.ltA9zZmJKszBJuuV7pTWtY7LzLXrRUfebJDhy_jGMeM</code></pre>
-<h3 id="description-claims">Claims</h3>
+<h3 id="description-example-header-1">Example Header</h3>
+<pre><code>Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhNnZoQW8zRkc3dDEiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE0NzA1OTg5NzIsImV4cCI6MTQ3MDY4NTM3Mn0.ltA9zZmJKszBJuuV7pTWtY7LzLXrRUfebJDhy_jGMeM</code></pre>
+<h3 id="description-claims-2">Claims</h3>
 <ul>
 <li>
 <p><code>exp</code> - The exp ( <em>expiration time</em> ) claim identifies the expiration time on or after which the JWT MUST NOT be accepted for processing.</p>
@@ -229,28 +272,30 @@
 <li>
 <p><code>sub</code> - The aud ( <em>audience</em> ) claim identifies the subject of this token (for e.g. a user id).</p>
 </li>
-<li><code>iss</code> - The iss ( <em>issuer</em> ) claim identifies the principal that issued the JWT.</li>
+<li>
+<p><code>iss</code> - The iss ( <em>issuer</em> ) claim identifies the principal that issued the JWT.</p>
+</li>
 </ul>
-<h2 id="description-consumer-identification">Consumer Identification</h2>
+<h2 id="description-consumer-identification-3">Consumer Identification</h2>
 <p>This API uses <code>User-Agent</code> and <code>Application-Id</code> headers to identify API consumer. <code>Application-Id</code> MUST contain an UUID that uniquely identifies a particular consumer installation.</p>
-<h3 id="description-example-headers">Example Headers</h3>
-<pre><code class="hljs http"><span class="hljs-attribute">User-Agent</span>: Mozilla/5.0 (Linux; Android 4.4; Nexus 5 Build/_BuildID_) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36
-<span class="hljs-attribute">Application-Id</span>: 6454d937-0a18-44a8-b482-bb48684f1ed4</code></pre>
-<h2 id="description-filtering-ordering-pagination-searching">Filtering, Ordering, Pagination &amp; Searching</h2>
-<h3 id="description-filtering">Filtering</h3>
+<h3 id="description-example-headers-4">Example Headers</h3>
+<pre><code>User-Agent: Mozilla/5.0 (Linux; Android 4.4; Nexus 5 Build/_BuildID_) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36
+Application-Id: 6454d937-0a18-44a8-b482-bb48684f1ed4</code></pre>
+<h2 id="description-filtering-ordering-pagination-searching-5">Filtering, Ordering, Pagination &amp; Searching</h2>
+<h3 id="description-filtering-6">Filtering</h3>
 <p>This API can filter returned collections based on provided query parameters. Virtually any model field can be used as a filter.</p>
 <p>For example, when requesting a list of movies from the /movies endpoint, you may want to limit these to only those of drama genre. This could be accomplished with a request like <code>GET /movies?genre=drama</code>. Here, genre is a query parameter that implements a filter.</p>
-<h3 id="description-ordering">Ordering</h3>
+<h3 id="description-ordering-7">Ordering</h3>
 <p>This API can sort returned collections. A generic query parameter <code>sort</code> is used to describe sorting rules. This parameter can take a list of comma separated field, each with a possible unary negative to imply descending sort order.</p>
 <p>E.g. <code>GET /movies?sort=-rating</code> - Retrieves a list of movies in descending order of user rating.</p>
 <p>By default all resources are ordered by their creation time, from newest to oldest.</p>
-<h3 id="description-pagination">Pagination</h3>
+<h3 id="description-pagination-8">Pagination</h3>
 <p>This API uses the <a href="http://tools.ietf.org/html/rfc5988#page-6">Link header - RFC 5988</a> to include pagination details.</p>
 <p>An example of a Link header is described in <a href="https://developer.github.com/guides/traversing-with-pagination/">GitHub documentation</a>.</p>
 <p>This API returns total count of paged resources in <code>Total-Count</code> HTTP header.</p>
-<h3 id="description-searching">Searching</h3>
+<h3 id="description-searching-9">Searching</h3>
 <p>This API uses a generic parameter <code>search</code> to expose a full text search mechanism.</p>
-<h2 id="description-http-methods">HTTP Methods</h2>
+<h2 id="description-http-methods-10">HTTP Methods</h2>
 <p>This API uses HTTP verbs (methods) as following:</p>
 <ul>
 <li>
@@ -265,25 +310,27 @@
 <li>
 <p><code>PATCH</code> - <em>Update/Modify</em> - used for <strong>modify</strong> capabilities. The PATCH request only needs to contain the changes to the resource, not the complete resource.</p>
 </li>
-<li><code>DELETE</code> - <em>Delete</em> - used to <strong>delete</strong> a resource identified by a URI.</li>
+<li>
+<p><code>DELETE</code> - <em>Delete</em> - used to <strong>delete</strong> a resource identified by a URI.</p>
+</li>
 </ul>
-<h2 id="description-localization">Localization</h2>
+<h2 id="description-localization-11">Localization</h2>
 <p>This API uses <code>Accept-Language</code> header to identify the locale.</p>
 <p><code>Accept-Language: en</code></p>
 <p>This header SHOULD be present in every request. If not, API MUST use the <strong>english</strong> language/locale.</p>
-<h2 id="description-media-type">Media Type</h2>
+<h2 id="description-media-type-12">Media Type</h2>
 <p>Where applicable this API MUST use the JSON media-type. Requests with a message-body are using plain JSON to set or update resource states.</p>
 <p><code>Content-type: application/json</code> and <code>Accept: application/json</code> headers SHOULD be set on all requests if not stated otherwise.</p>
-<h2 id="description-notational-conventions">Notational Conventions</h2>
-<p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in <a href="https://www.ietf.org/rfc/rfc2119">RFC2119</a>.</p>
-<h2 id="description-representation-of-date-and-time">Representation of Date and Time</h2>
+<h2 id="description-notational-conventions-13">Notational Conventions</h2>
+<p>The key words &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;, &quot;SHOULD&quot;, &quot;SHOULD NOT&quot;, &quot;RECOMMENDED&quot;, &quot;MAY&quot;, and &quot;OPTIONAL&quot; in this document are to be interpreted as described in <a href="https://www.ietf.org/rfc/rfc2119">RFC2119</a>.</p>
+<h2 id="description-representation-of-date-and-time-14">Representation of Date and Time</h2>
 <p>All exchange of date and time-related data MUST be done according to ISO 8601 standard and stored in UTC.</p>
 <p>When returning date and time-related data <code>YYYY-MM-DDThh:mm:ss.SSSZ</code> format MUST be used.</p>
-<h2 id="description-resource-ids">Resource IDs</h2>
+<h2 id="description-resource-ids-15">Resource IDs</h2>
 <p>This API uses short non-sequential url-friendly unique ids. Every resource id MUST consists of 9 url-friendly characters: <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>_</code> and <code>-</code>.</p>
-<h3 id="description-example">Example</h3>
+<h3 id="description-example-16">Example</h3>
 <p><code>a6vhAo3FG7t1</code></p>
-<h2 id="description-status-codes-and-errors">Status Codes and Errors</h2>
+<h2 id="description-status-codes-and-errors-17">Status Codes and Errors</h2>
 <p>This API uses HTTP status codes to communicate with the API consumer.</p>
 <ul>
 <li>
@@ -313,12 +360,14 @@
 <li>
 <p><code>406 Not Acceptable</code> - Could not satisfy the request Accept header.</p>
 </li>
-<li><code>415 Unsupported Media Type</code> - Unsupported media type in request.</li>
+<li>
+<p><code>415 Unsupported Media Type</code> - Unsupported media type in request.</p>
+</li>
 </ul>
-<h3 id="description-error-response">Error response</h3>
+<h3 id="description-error-response-18">Error response</h3>
 <p>This API returns both, machine-readable error codes and human-readable error messages in response body when an error is encountered.</p>
-<h4 id="description-example">Example</h4>
-<h5 id="description-validation-error">Validation Error</h5>
+<h4 id="description-example-19">Example</h4>
+<h5 id="description-validation-error-20">Validation Error</h5>
 <pre><code class="language-js">{
     "statusCode": 400,
     "error": "Bad Request",
@@ -349,7 +398,7 @@
         }
     }
 }</code></pre>
-<h5 id="description-generic-error">Generic Error</h5>
+<h5 id="description-generic-error-21">Generic Error</h5>
 <pre><code class="language-js">{
     "statusCode": 403,
     "error": "Forbidden",
@@ -358,7 +407,7 @@
         "code": 13003
     }
 }</code></pre>
-<h4 id="description-error-codes-dictionary">Error Codes Dictionary</h4>
+<h4 id="description-error-codes-dictionary-22">Error Codes Dictionary</h4>
 <ul>
 <li>
 <p><code>10003</code> - Invalid query parameters</p>
@@ -384,9 +433,11 @@
 <li>
 <p><code>11005</code> - Account not allowed to access this endpoint</p>
 </li>
-<li><code>13003</code> - Your account is suspended and is not permitted to access this feature</li>
+<li>
+<p><code>13003</code> - Your account is suspended and is not permitted to access this feature</p>
+</li>
 </ul>
-<h2 id="description-versioning">Versioning</h2>
+<h2 id="description-versioning-23">Versioning</h2>
 <p>This API uses <code>Api-Version</code> header to identify requested version. Every <strong>minor</strong> version SHOULD be backward compatible. However, <strong>major</strong> versions MAY introduce <em>breaking changes</em>.</p>
 <p><code>Api-Version: 1.0.0</code></p>
 <p>This header SHOULD be present in every request. If not, API MUST use the newest available major release.</p>
@@ -412,9 +463,9 @@
     <div class="panel panel-default panel-action">
     <div class="panel-heading">
         <h4 class="panel-title" id="authentication-user-login-retrieve-a-token">
-            <div class="method post">POST</div>
+            <span class="method post">POST</span>
             <code class="uri">/auth/login</code>
-            <div class="name">Retrieve a token</div>
+            <span class="name">Retrieve a token</span>
         </h4>
     </div>
     <div class="panel-body">
@@ -452,46 +503,72 @@
             <div class="transaction">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li role="presentation" class="">
-                        <a href="#authentication-user-login-retrieve-a-token-request" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                        <a href="#authentication-user-login-retrieve-a-token-request" aria-controls="authentication-user-login-retrieve-a-token-request" role="tab" data-toggle="tab">Request</a>
                     </li>
                                             <li role="presentation">
-                            <a href="#authentication-user-login-retrieve-a-token-response-200" aria-controls="profile" role="tab" data-toggle="tab">Response <code>200</code></a>
+                            <a href="#authentication-user-login-retrieve-a-token-response-200" aria-controls="authentication-user-login-retrieve-a-token-response-200" role="tab"
+                               data-toggle="tab">Response <code>200</code></a>
                         </li>
                                     </ul>
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="authentication-user-login-retrieve-a-token-request">
-                                                    <p><strong>Headers</strong></p>
-                            <pre><code class="hljs http"><span class="hljs-attribute">Content-Type</span>: application/json<br></code></pre>
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane" id="authentication-user-login-retrieve-a-token-response-200">
-                                                            <p><strong>Headers</strong></p>
-                                <pre><code class="hljs http"><span class="hljs-attribute">Content-Type</span>: application/json<br></code></pre>
-                                                                                        <p><strong>Body</strong></p>
-                                <pre><code class="hljs json">{
-  <span class="hljs-attr">"token"</span>: <span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...."</span>
+                        <p><strong>Headers</strong></p>
+    <pre><code>Content-Type: application/json<br></code></pre>
+    <p><strong>Body</strong></p>
+    <pre><code>{
+  &quot;login&quot;: &quot;john.doe@mail.com&quot;,
+  &quot;password&quot;: &quot;QXR0mi38a2&quot;
 }</code></pre>
-                                                                                        <p><strong>Schema</strong></p>
-                                <pre><code class="hljs json">{
-  <span class="hljs-attr">"$schema"</span>: <span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span>,
-  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
-  <span class="hljs-attr">"properties"</span>: {
-    <span class="hljs-attr">"token"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"JSON Web Token."</span>
+    <p><strong>Schema</strong></p>
+    <pre><code>{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;login&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;User email address&quot;
+    },
+    &quot;password&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;User password&quot;
+    }
+  },
+  &quot;required&quot;: [
+    &quot;login&quot;,
+    &quot;password&quot;
+  ]
+}</code></pre>
+                    </div>
+                                            <div role="tabpanel" class="tab-pane" id="authentication-user-login-retrieve-a-token-response-200">
+                            <p><strong>Headers</strong></p>
+    <pre><code>Content-Type: application/json<br></code></pre>
+    <p><strong>Body</strong></p>
+    <pre><code>{
+  &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....&quot;
+}</code></pre>
+    <p><strong>Schema</strong></p>
+    <pre><code>{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;token&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;JSON Web Token.&quot;
     }
   }
 }</code></pre>
-                                                    </div>
+                        </div>
                                     </div>
             </div>
         </div>
-    </div>    <div class="panel panel-default panel-action">
+    </div>
+    <div class="panel panel-default panel-action">
     <div class="panel-heading">
         <h4 class="panel-title" id="authentication-user-login-refresh-a-token">
-            <div class="method post">POST</div>
+            <span class="method post">POST</span>
             <code class="uri">/auth/login</code>
-            <div class="name">Refresh a token</div>
+            <span class="name">Refresh a token</span>
         </h4>
     </div>
     <div class="panel-body">
@@ -530,41 +607,43 @@
             <div class="transaction">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li role="presentation" class="">
-                        <a href="#authentication-user-login-refresh-a-token-request" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                        <a href="#authentication-user-login-refresh-a-token-request" aria-controls="authentication-user-login-refresh-a-token-request" role="tab" data-toggle="tab">Request</a>
                     </li>
                                             <li role="presentation">
-                            <a href="#authentication-user-login-refresh-a-token-response-200" aria-controls="profile" role="tab" data-toggle="tab">Response <code>200</code></a>
+                            <a href="#authentication-user-login-refresh-a-token-response-200" aria-controls="authentication-user-login-refresh-a-token-response-200" role="tab"
+                               data-toggle="tab">Response <code>200</code></a>
                         </li>
                                     </ul>
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="authentication-user-login-refresh-a-token-request">
-                                                    <p><strong>Headers</strong></p>
-                            <pre><code class="hljs http"><span class="hljs-attribute">Authorization</span>: JWT &lt;token&gt;<br></code></pre>
-                                            </div>
+                        <p><strong>Headers</strong></p>
+    <pre><code>Authorization: JWT &lt;token&gt;<br></code></pre>
+                    </div>
                                             <div role="tabpanel" class="tab-pane" id="authentication-user-login-refresh-a-token-response-200">
-                                                            <p><strong>Headers</strong></p>
-                                <pre><code class="hljs http"><span class="hljs-attribute">Content-Type</span>: application/json<br></code></pre>
-                                                                                        <p><strong>Body</strong></p>
-                                <pre><code class="hljs json">{
-  <span class="hljs-attr">"token"</span>: <span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...."</span>
+                            <p><strong>Headers</strong></p>
+    <pre><code>Content-Type: application/json<br></code></pre>
+    <p><strong>Body</strong></p>
+    <pre><code>{
+  &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....&quot;
 }</code></pre>
-                                                                                        <p><strong>Schema</strong></p>
-                                <pre><code class="hljs json">{
-  <span class="hljs-attr">"$schema"</span>: <span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span>,
-  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
-  <span class="hljs-attr">"properties"</span>: {
-    <span class="hljs-attr">"token"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"New JWT"</span>
+    <p><strong>Schema</strong></p>
+    <pre><code>{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;token&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;New JWT&quot;
     }
   }
 }</code></pre>
-                                                    </div>
+                        </div>
                                     </div>
             </div>
         </div>
-    </div>                    <h3 id="authentication-user-registration">
+    </div>
+                    <h3 id="authentication-user-registration">
     User registration
 </h3>
 
@@ -572,9 +651,9 @@
     <div class="panel panel-default panel-action">
     <div class="panel-heading">
         <h4 class="panel-title" id="authentication-user-registration-register-a-new-user">
-            <div class="method post">POST</div>
+            <span class="method post">POST</span>
             <code class="uri">/auth/register</code>
-            <div class="name">Register a new user</div>
+            <span class="name">Register a new user</span>
         </h4>
     </div>
     <div class="panel-body">
@@ -589,7 +668,9 @@
 <li>
 <p>Passwords MUST NOT contain the user name or parts of the user’s full name, such as his first name.</p>
 </li>
-<li>Passwords MUST use at least three of the four available character types: lowercase letters, uppercase letters, numbers, and symbols.</li>
+<li>
+<p>Passwords MUST use at least three of the four available character types: lowercase letters, uppercase letters, numbers, and symbols.</p>
+</li>
 </ul>
 <p>After successful registration a confirmation email MUST be sent to provided address.</p>
 <p><strong>Endpoint information</strong></p>
@@ -643,24 +724,51 @@
             <div class="transaction">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li role="presentation" class="">
-                        <a href="#authentication-user-registration-register-a-new-user-request" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                        <a href="#authentication-user-registration-register-a-new-user-request" aria-controls="authentication-user-registration-register-a-new-user-request" role="tab" data-toggle="tab">Request</a>
                     </li>
                                             <li role="presentation">
-                            <a href="#authentication-user-registration-register-a-new-user-response-201" aria-controls="profile" role="tab" data-toggle="tab">Response <code>201</code></a>
+                            <a href="#authentication-user-registration-register-a-new-user-response-201" aria-controls="authentication-user-registration-register-a-new-user-response-201" role="tab"
+                               data-toggle="tab">Response <code>201</code></a>
                         </li>
                                     </ul>
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="authentication-user-registration-register-a-new-user-request">
-                                                    <p><strong>Headers</strong></p>
-                            <pre><code class="hljs http"><span class="hljs-attribute">Content-Type</span>: application/json<br></code></pre>
-                                            </div>
+                        <p><strong>Headers</strong></p>
+    <pre><code>Content-Type: application/json<br></code></pre>
+    <p><strong>Body</strong></p>
+    <pre><code>{
+  &quot;email&quot;: &quot;john.doe@mail.com&quot;,
+  &quot;password&quot;: &quot;QXR0mi38a2&quot;
+}</code></pre>
+    <p><strong>Schema</strong></p>
+    <pre><code>{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;email&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;E-mail address.&quot;
+    },
+    &quot;password&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;User password.&quot;
+    }
+  },
+  &quot;required&quot;: [
+    &quot;email&quot;,
+    &quot;password&quot;
+  ]
+}</code></pre>
+                    </div>
                                             <div role="tabpanel" class="tab-pane" id="authentication-user-registration-register-a-new-user-response-201">
-                                                                                                            </div>
+                            <p><strong>This has no content.</strong></p>
+                        </div>
                                     </div>
             </div>
         </div>
-    </div>            </div>
+    </div>
+            </div>
 </div>                                    <div class="panel panel-default panel-resource-group">
     <div class="panel-heading">
         <h2 class="panel-title" id="user">
@@ -678,9 +786,9 @@
     <div class="panel panel-default panel-action">
     <div class="panel-heading">
         <h4 class="panel-title" id="user-current-user-profile-retrieve-profile-of-the-current-user">
-            <div class="method get">GET</div>
+            <span class="method get">GET</span>
             <code class="uri">/users/me</code>
-            <div class="name">Retrieve profile of the current user</div>
+            <span class="name">Retrieve profile of the current user</span>
         </h4>
     </div>
     <div class="panel-body">
@@ -718,100 +826,102 @@
             <div class="transaction">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li role="presentation" class="">
-                        <a href="#user-current-user-profile-retrieve-profile-of-the-current-user-request" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                        <a href="#user-current-user-profile-retrieve-profile-of-the-current-user-request" aria-controls="user-current-user-profile-retrieve-profile-of-the-current-user-request" role="tab" data-toggle="tab">Request</a>
                     </li>
                                             <li role="presentation">
-                            <a href="#user-current-user-profile-retrieve-profile-of-the-current-user-response-200" aria-controls="profile" role="tab" data-toggle="tab">Response <code>200</code></a>
+                            <a href="#user-current-user-profile-retrieve-profile-of-the-current-user-response-200" aria-controls="user-current-user-profile-retrieve-profile-of-the-current-user-response-200" role="tab"
+                               data-toggle="tab">Response <code>200</code></a>
                         </li>
                                     </ul>
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="user-current-user-profile-retrieve-profile-of-the-current-user-request">
-                                                    <p><strong>Headers</strong></p>
-                            <pre><code class="hljs http"><span class="hljs-attribute">Authorization</span>: JWT &lt;token&gt;<br></code></pre>
-                                            </div>
+                        <p><strong>Headers</strong></p>
+    <pre><code>Authorization: JWT &lt;token&gt;<br></code></pre>
+                    </div>
                                             <div role="tabpanel" class="tab-pane" id="user-current-user-profile-retrieve-profile-of-the-current-user-response-200">
-                                                            <p><strong>Headers</strong></p>
-                                <pre><code class="hljs http"><span class="hljs-attribute">Content-Type</span>: application/json<br></code></pre>
-                                                                                        <p><strong>Body</strong></p>
-                                <pre><code class="hljs json">{
-  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"a6vhAo3FG7t1"</span>,
-  <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2016-07-01T15:11:09.553Z"</span>,
-  <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2016-07-01T15:11:09.553Z"</span>,
-  <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john.doe@mail.com"</span>,
-  <span class="hljs-attr">"facebookId"</span>: <span class="hljs-number">888047057953991</span>,
-  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John"</span>,
-  <span class="hljs-attr">"surname"</span>: <span class="hljs-string">"Doe"</span>,
-  <span class="hljs-attr">"avatar"</span>: <span class="hljs-literal">null</span>
+                            <p><strong>Headers</strong></p>
+    <pre><code>Content-Type: application/json<br></code></pre>
+    <p><strong>Body</strong></p>
+    <pre><code>{
+  &quot;id&quot;: &quot;a6vhAo3FG7t1&quot;,
+  &quot;createdAt&quot;: &quot;2016-07-01T15:11:09.553Z&quot;,
+  &quot;updatedAt&quot;: &quot;2016-07-01T15:11:09.553Z&quot;,
+  &quot;email&quot;: &quot;john.doe@mail.com&quot;,
+  &quot;facebookId&quot;: 888047057953991,
+  &quot;name&quot;: &quot;John&quot;,
+  &quot;surname&quot;: &quot;Doe&quot;,
+  &quot;avatar&quot;: null
 }</code></pre>
-                                                                                        <p><strong>Schema</strong></p>
-                                <pre><code class="hljs json">{
-  <span class="hljs-attr">"$schema"</span>: <span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span>,
-  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
-  <span class="hljs-attr">"properties"</span>: {
-    <span class="hljs-attr">"id"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"enum"</span>: [
-        <span class="hljs-string">"a6vhAo3FG7t1"</span>
+    <p><strong>Schema</strong></p>
+    <pre><code>{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;id&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [
+        &quot;a6vhAo3FG7t1&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Short non-sequential url-friendly unique id."</span>
+      &quot;description&quot;: &quot;Short non-sequential url-friendly unique id.&quot;
     },
-    <span class="hljs-attr">"createdAt"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"ISO Date/time string. When this resource was created."</span>
+    &quot;createdAt&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;ISO Date/time string. When this resource was created.&quot;
     },
-    <span class="hljs-attr">"updatedAt"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"ISO Date/time string. When this resource was last updated."</span>
+    &quot;updatedAt&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;ISO Date/time string. When this resource was last updated.&quot;
     },
-    <span class="hljs-attr">"email"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Login. Unique email address of the user."</span>
+    &quot;email&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;Login. Unique email address of the user.&quot;
     },
-    <span class="hljs-attr">"facebookId"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"number"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;facebookId&quot;: {
+      &quot;type&quot;: [
+        &quot;number&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Facebook ID of the user if user account is linked to the Facebook account."</span>
+      &quot;description&quot;: &quot;Facebook ID of the user if user account is linked to the Facebook account.&quot;
     },
-    <span class="hljs-attr">"name"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;name&quot;: {
+      &quot;type&quot;: [
+        &quot;string&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"First name of the user."</span>
+      &quot;description&quot;: &quot;First name of the user.&quot;
     },
-    <span class="hljs-attr">"surname"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;surname&quot;: {
+      &quot;type&quot;: [
+        &quot;string&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Last name of the user."</span>
+      &quot;description&quot;: &quot;Last name of the user.&quot;
     },
-    <span class="hljs-attr">"avatar"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;avatar&quot;: {
+      &quot;type&quot;: [
+        &quot;string&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"URL to user avatar."</span>
+      &quot;description&quot;: &quot;URL to user avatar.&quot;
     }
   },
-  <span class="hljs-attr">"required"</span>: [
-    <span class="hljs-string">"id"</span>,
-    <span class="hljs-string">"email"</span>
+  &quot;required&quot;: [
+    &quot;id&quot;,
+    &quot;email&quot;
   ]
 }</code></pre>
-                                                    </div>
+                        </div>
                                     </div>
             </div>
         </div>
-    </div>    <div class="panel panel-default panel-action">
+    </div>
+    <div class="panel panel-default panel-action">
     <div class="panel-heading">
         <h4 class="panel-title" id="user-current-user-profile-partialy-update-a-profile-of-the-current-user">
-            <div class="method patch">PATCH</div>
+            <span class="method patch">PATCH</span>
             <code class="uri">/users/me</code>
-            <div class="name">Partialy update a profile of the current user</div>
+            <span class="name">Partialy update a profile of the current user</span>
         </h4>
     </div>
     <div class="panel-body">
@@ -849,95 +959,112 @@
             <div class="transaction">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li role="presentation" class="">
-                        <a href="#user-current-user-profile-partialy-update-a-profile-of-the-current-user-request" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                        <a href="#user-current-user-profile-partialy-update-a-profile-of-the-current-user-request" aria-controls="user-current-user-profile-partialy-update-a-profile-of-the-current-user-request" role="tab" data-toggle="tab">Request</a>
                     </li>
                                             <li role="presentation">
-                            <a href="#user-current-user-profile-partialy-update-a-profile-of-the-current-user-response-200" aria-controls="profile" role="tab" data-toggle="tab">Response <code>200</code></a>
+                            <a href="#user-current-user-profile-partialy-update-a-profile-of-the-current-user-response-200" aria-controls="user-current-user-profile-partialy-update-a-profile-of-the-current-user-response-200" role="tab"
+                               data-toggle="tab">Response <code>200</code></a>
                         </li>
                                     </ul>
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="user-current-user-profile-partialy-update-a-profile-of-the-current-user-request">
-                                                    <p><strong>Headers</strong></p>
-                            <pre><code class="hljs http"><span class="hljs-attribute">Content-Type</span>: application/json<br>Authorization: JWT &lt;token&gt;<br></code></pre>
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane" id="user-current-user-profile-partialy-update-a-profile-of-the-current-user-response-200">
-                                                            <p><strong>Headers</strong></p>
-                                <pre><code class="hljs http"><span class="hljs-attribute">Content-Type</span>: application/json<br></code></pre>
-                                                                                        <p><strong>Body</strong></p>
-                                <pre><code class="hljs json">{
-  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"a6vhAo3FG7t1"</span>,
-  <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2016-07-01T15:11:09.553Z"</span>,
-  <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2016-07-01T15:11:09.553Z"</span>,
-  <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john.doe@mail.com"</span>,
-  <span class="hljs-attr">"facebookId"</span>: <span class="hljs-number">888047057953991</span>,
-  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John"</span>,
-  <span class="hljs-attr">"surname"</span>: <span class="hljs-string">"Doe"</span>,
-  <span class="hljs-attr">"avatar"</span>: <span class="hljs-literal">null</span>
+                        <p><strong>Headers</strong></p>
+    <pre><code>Content-Type: application/json<br>Authorization: JWT &lt;token&gt;<br></code></pre>
+    <p><strong>Body</strong></p>
+    <pre><code>{
+  &quot;name&quot;: &quot;Ben&quot;
 }</code></pre>
-                                                                                        <p><strong>Schema</strong></p>
-                                <pre><code class="hljs json">{
-  <span class="hljs-attr">"$schema"</span>: <span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span>,
-  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
-  <span class="hljs-attr">"properties"</span>: {
-    <span class="hljs-attr">"id"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"enum"</span>: [
-        <span class="hljs-string">"a6vhAo3FG7t1"</span>
+    <p><strong>Schema</strong></p>
+    <pre><code>{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;name&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;First name of the user.&quot;
+    }
+  }
+}</code></pre>
+                    </div>
+                                            <div role="tabpanel" class="tab-pane" id="user-current-user-profile-partialy-update-a-profile-of-the-current-user-response-200">
+                            <p><strong>Headers</strong></p>
+    <pre><code>Content-Type: application/json<br></code></pre>
+    <p><strong>Body</strong></p>
+    <pre><code>{
+  &quot;id&quot;: &quot;a6vhAo3FG7t1&quot;,
+  &quot;createdAt&quot;: &quot;2016-07-01T15:11:09.553Z&quot;,
+  &quot;updatedAt&quot;: &quot;2016-07-01T15:11:09.553Z&quot;,
+  &quot;email&quot;: &quot;john.doe@mail.com&quot;,
+  &quot;facebookId&quot;: 888047057953991,
+  &quot;name&quot;: &quot;John&quot;,
+  &quot;surname&quot;: &quot;Doe&quot;,
+  &quot;avatar&quot;: null
+}</code></pre>
+    <p><strong>Schema</strong></p>
+    <pre><code>{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;id&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [
+        &quot;a6vhAo3FG7t1&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Short non-sequential url-friendly unique id."</span>
+      &quot;description&quot;: &quot;Short non-sequential url-friendly unique id.&quot;
     },
-    <span class="hljs-attr">"createdAt"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"ISO Date/time string. When this resource was created."</span>
+    &quot;createdAt&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;ISO Date/time string. When this resource was created.&quot;
     },
-    <span class="hljs-attr">"updatedAt"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"ISO Date/time string. When this resource was last updated."</span>
+    &quot;updatedAt&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;ISO Date/time string. When this resource was last updated.&quot;
     },
-    <span class="hljs-attr">"email"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Login. Unique email address of the user."</span>
+    &quot;email&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;Login. Unique email address of the user.&quot;
     },
-    <span class="hljs-attr">"facebookId"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"number"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;facebookId&quot;: {
+      &quot;type&quot;: [
+        &quot;number&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Facebook ID of the user if user account is linked to the Facebook account."</span>
+      &quot;description&quot;: &quot;Facebook ID of the user if user account is linked to the Facebook account.&quot;
     },
-    <span class="hljs-attr">"name"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;name&quot;: {
+      &quot;type&quot;: [
+        &quot;string&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"First name of the user."</span>
+      &quot;description&quot;: &quot;First name of the user.&quot;
     },
-    <span class="hljs-attr">"surname"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;surname&quot;: {
+      &quot;type&quot;: [
+        &quot;string&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Last name of the user."</span>
+      &quot;description&quot;: &quot;Last name of the user.&quot;
     },
-    <span class="hljs-attr">"avatar"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;avatar&quot;: {
+      &quot;type&quot;: [
+        &quot;string&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"URL to user avatar."</span>
+      &quot;description&quot;: &quot;URL to user avatar.&quot;
     }
   },
-  <span class="hljs-attr">"required"</span>: [
-    <span class="hljs-string">"id"</span>,
-    <span class="hljs-string">"email"</span>
+  &quot;required&quot;: [
+    &quot;id&quot;,
+    &quot;email&quot;
   ]
 }</code></pre>
-                                                    </div>
+                        </div>
                                     </div>
             </div>
         </div>
-    </div>                    <h3 id="user-user-password">
+    </div>
+                    <h3 id="user-user-password">
     User password
 </h3>
 
@@ -945,9 +1072,9 @@
     <div class="panel panel-default panel-action">
     <div class="panel-heading">
         <h4 class="panel-title" id="user-user-password-change-a-password-of-the-current-user">
-            <div class="method put">PUT</div>
+            <span class="method put">PUT</span>
             <code class="uri">/users/me/password</code>
-            <div class="name">Change a password of the current user</div>
+            <span class="name">Change a password of the current user</span>
         </h4>
     </div>
     <div class="panel-body">
@@ -1003,24 +1130,49 @@
             <div class="transaction">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li role="presentation" class="">
-                        <a href="#user-user-password-change-a-password-of-the-current-user-request" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                        <a href="#user-user-password-change-a-password-of-the-current-user-request" aria-controls="user-user-password-change-a-password-of-the-current-user-request" role="tab" data-toggle="tab">Request</a>
                     </li>
                                             <li role="presentation">
-                            <a href="#user-user-password-change-a-password-of-the-current-user-response-200" aria-controls="profile" role="tab" data-toggle="tab">Response <code>200</code></a>
+                            <a href="#user-user-password-change-a-password-of-the-current-user-response-200" aria-controls="user-user-password-change-a-password-of-the-current-user-response-200" role="tab"
+                               data-toggle="tab">Response <code>200</code></a>
                         </li>
                                     </ul>
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="user-user-password-change-a-password-of-the-current-user-request">
-                                                    <p><strong>Headers</strong></p>
-                            <pre><code class="hljs http"><span class="hljs-attribute">Content-Type</span>: application/json<br>Authorization: JWT &lt;token&gt;<br></code></pre>
-                                            </div>
+                        <p><strong>Headers</strong></p>
+    <pre><code>Content-Type: application/json<br>Authorization: JWT &lt;token&gt;<br></code></pre>
+    <p><strong>Body</strong></p>
+    <pre><code>{
+  &quot;old_password&quot;: &quot;secret&quot;,
+  &quot;new_password&quot;: &quot;$3C6e7&quot;
+}</code></pre>
+    <p><strong>Schema</strong></p>
+    <pre><code>{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;old_password&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;new_password&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    }
+  },
+  &quot;required&quot;: [
+    &quot;old_password&quot;,
+    &quot;new_password&quot;
+  ]
+}</code></pre>
+                    </div>
                                             <div role="tabpanel" class="tab-pane" id="user-user-password-change-a-password-of-the-current-user-response-200">
-                                                                                                            </div>
+                            <p><strong>This has no content.</strong></p>
+                        </div>
                                     </div>
             </div>
         </div>
-    </div>                    <h3 id="user-user-avatar">
+    </div>
+                    <h3 id="user-user-avatar">
     User avatar
 </h3>
 
@@ -1028,9 +1180,9 @@
     <div class="panel panel-default panel-action">
     <div class="panel-heading">
         <h4 class="panel-title" id="user-user-avatar-set-user-avatar">
-            <div class="method post">POST</div>
+            <span class="method post">POST</span>
             <code class="uri">/users/me/avatar</code>
-            <div class="name">Set user avatar</div>
+            <span class="name">Set user avatar</span>
         </h4>
     </div>
     <div class="panel-body">
@@ -1091,29 +1243,32 @@
             <div class="transaction">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li role="presentation" class="">
-                        <a href="#user-user-avatar-set-user-avatar-request" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                        <a href="#user-user-avatar-set-user-avatar-request" aria-controls="user-user-avatar-set-user-avatar-request" role="tab" data-toggle="tab">Request</a>
                     </li>
                                             <li role="presentation">
-                            <a href="#user-user-avatar-set-user-avatar-response-200" aria-controls="profile" role="tab" data-toggle="tab">Response <code>200</code></a>
+                            <a href="#user-user-avatar-set-user-avatar-response-200" aria-controls="user-user-avatar-set-user-avatar-response-200" role="tab"
+                               data-toggle="tab">Response <code>200</code></a>
                         </li>
                                     </ul>
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="user-user-avatar-set-user-avatar-request">
-                                                    <p><strong>Headers</strong></p>
-                            <pre><code class="hljs http"><span class="hljs-attribute">Content-Type</span>: multipart/form-data<br>Authorization: JWT &lt;token&gt;<br></code></pre>
-                                            </div>
+                        <p><strong>Headers</strong></p>
+    <pre><code>Content-Type: multipart/form-data<br>Authorization: JWT &lt;token&gt;<br></code></pre>
+                    </div>
                                             <div role="tabpanel" class="tab-pane" id="user-user-avatar-set-user-avatar-response-200">
-                                                                                                            </div>
+                            <p><strong>This has no content.</strong></p>
+                        </div>
                                     </div>
             </div>
         </div>
-    </div>    <div class="panel panel-default panel-action">
+    </div>
+    <div class="panel panel-default panel-action">
     <div class="panel-heading">
         <h4 class="panel-title" id="user-user-avatar-delete-user-avatar">
-            <div class="method delete">DELETE</div>
+            <span class="method delete">DELETE</span>
             <code class="uri">/users/me/avatar</code>
-            <div class="name">Delete user avatar</div>
+            <span class="name">Delete user avatar</span>
         </h4>
     </div>
     <div class="panel-body">
@@ -1151,24 +1306,27 @@
             <div class="transaction">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li role="presentation" class="">
-                        <a href="#user-user-avatar-delete-user-avatar-request" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                        <a href="#user-user-avatar-delete-user-avatar-request" aria-controls="user-user-avatar-delete-user-avatar-request" role="tab" data-toggle="tab">Request</a>
                     </li>
                                             <li role="presentation">
-                            <a href="#user-user-avatar-delete-user-avatar-response-204" aria-controls="profile" role="tab" data-toggle="tab">Response <code>204</code></a>
+                            <a href="#user-user-avatar-delete-user-avatar-response-204" aria-controls="user-user-avatar-delete-user-avatar-response-204" role="tab"
+                               data-toggle="tab">Response <code>204</code></a>
                         </li>
                                     </ul>
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="user-user-avatar-delete-user-avatar-request">
-                                                    <p><strong>Headers</strong></p>
-                            <pre><code class="hljs http"><span class="hljs-attribute">Authorization</span>: JWT &lt;token&gt;<br></code></pre>
-                                            </div>
+                        <p><strong>Headers</strong></p>
+    <pre><code>Authorization: JWT &lt;token&gt;<br></code></pre>
+                    </div>
                                             <div role="tabpanel" class="tab-pane" id="user-user-avatar-delete-user-avatar-response-204">
-                                                                                                            </div>
+                            <p><strong>This has no content.</strong></p>
+                        </div>
                                     </div>
             </div>
         </div>
-    </div>                    <h3 id="user-users">
+    </div>
+                    <h3 id="user-users">
     Users
 </h3>
 
@@ -1176,9 +1334,9 @@
     <div class="panel panel-default panel-action">
     <div class="panel-heading">
         <h4 class="panel-title" id="user-users-list-all-users">
-            <div class="method get">GET</div>
+            <span class="method get">GET</span>
             <code class="uri">/users</code>
-            <div class="name">List all users</div>
+            <span class="name">List all users</span>
         </h4>
     </div>
     <div class="panel-body">
@@ -1215,44 +1373,46 @@
             <div class="transaction">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li role="presentation" class="">
-                        <a href="#user-users-list-all-users-request" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                        <a href="#user-users-list-all-users-request" aria-controls="user-users-list-all-users-request" role="tab" data-toggle="tab">Request</a>
                     </li>
                                             <li role="presentation">
-                            <a href="#user-users-list-all-users-response-200" aria-controls="profile" role="tab" data-toggle="tab">Response <code>200</code></a>
+                            <a href="#user-users-list-all-users-response-200" aria-controls="user-users-list-all-users-response-200" role="tab"
+                               data-toggle="tab">Response <code>200</code></a>
                         </li>
                                     </ul>
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="user-users-list-all-users-request">
-                                                    <p><strong>Headers</strong></p>
-                            <pre><code class="hljs http"><span class="hljs-attribute">Authorization</span>: JWT &lt;token&gt;<br></code></pre>
-                                            </div>
+                        <p><strong>Headers</strong></p>
+    <pre><code>Authorization: JWT &lt;token&gt;<br></code></pre>
+                    </div>
                                             <div role="tabpanel" class="tab-pane" id="user-users-list-all-users-response-200">
-                                                            <p><strong>Headers</strong></p>
-                                <pre><code class="hljs http"><span class="hljs-attribute">Content-Type</span>: application/json<br></code></pre>
-                                                                                        <p><strong>Body</strong></p>
-                                <pre><code class="hljs json">[
+                            <p><strong>Headers</strong></p>
+    <pre><code>Content-Type: application/json<br></code></pre>
+    <p><strong>Body</strong></p>
+    <pre><code>[
   {
-    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"a6vhAo3FG7t1"</span>,
-    <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2016-07-01T15:11:09.553Z"</span>,
-    <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2016-07-01T15:11:09.553Z"</span>,
-    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john.doe@mail.com"</span>,
-    <span class="hljs-attr">"facebookId"</span>: <span class="hljs-number">888047057953991</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John"</span>,
-    <span class="hljs-attr">"surname"</span>: <span class="hljs-string">"Doe"</span>,
-    <span class="hljs-attr">"avatar"</span>: <span class="hljs-literal">null</span>
+    &quot;id&quot;: &quot;a6vhAo3FG7t1&quot;,
+    &quot;createdAt&quot;: &quot;2016-07-01T15:11:09.553Z&quot;,
+    &quot;updatedAt&quot;: &quot;2016-07-01T15:11:09.553Z&quot;,
+    &quot;email&quot;: &quot;john.doe@mail.com&quot;,
+    &quot;facebookId&quot;: 888047057953991,
+    &quot;name&quot;: &quot;John&quot;,
+    &quot;surname&quot;: &quot;Doe&quot;,
+    &quot;avatar&quot;: null
   }
 ]</code></pre>
-                                                                                        <p><strong>Schema</strong></p>
-                                <pre><code class="hljs json">{
-  <span class="hljs-attr">"$schema"</span>: <span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span>,
-  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"array"</span>
+    <p><strong>Schema</strong></p>
+    <pre><code>{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;array&quot;
 }</code></pre>
-                                                    </div>
+                        </div>
                                     </div>
             </div>
         </div>
-    </div>                    <h3 id="user-user">
+    </div>
+                    <h3 id="user-user">
     User
 </h3>
 
@@ -1260,9 +1420,9 @@
     <div class="panel panel-default panel-action">
     <div class="panel-heading">
         <h4 class="panel-title" id="user-user-retrieve-a-user">
-            <div class="method get">GET</div>
+            <span class="method get">GET</span>
             <code class="uri">/users/{id}</code>
-            <div class="name">Retrieve a user</div>
+            <span class="name">Retrieve a user</span>
         </h4>
     </div>
     <div class="panel-body">
@@ -1317,128 +1477,133 @@
 <div class="parameters">
     <table>
         <thead>
-            <tr>
-                <th></th>
-                <th></th>
-            </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
         </thead>
         <tbody>
-                            <tr>
-                    <td>
-                        <strong>id</strong>
-                    </td>
-                    <td>
-                        <p>
-                            <code>string</code>
-                                                            &nbsp;(optional)
-                                                                                                                    &nbsp;<span class="text-muted">Example: a6vhAo3FG7t1</span>
-                                                    </p>
-                        <p>id of the user.</p>
-                                            </td>
-                </tr>
-                    </tbody>
+                    <tr>
+                <td>
+                    <strong>id</strong>
+                </td>
+                <td>
+                    <p>
+                        <code>string</code>
+                                                    &nbsp;(optional)
+                                                                                                    &nbsp;<span class="text-muted">Example: a6vhAo3FG7t1</span>
+                                            </p>
+                    <p>id of the user.</p>
+                                    </td>
+            </tr>
+                </tbody>
     </table>
-</div>            </div>
+</div>
+            </div>
             <div class="panel-footer">
             <div class="transaction">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li role="presentation" class="">
-                        <a href="#user-user-retrieve-a-user-request" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                        <a href="#user-user-retrieve-a-user-request" aria-controls="user-user-retrieve-a-user-request" role="tab" data-toggle="tab">Request</a>
                     </li>
                                             <li role="presentation">
-                            <a href="#user-user-retrieve-a-user-response-200" aria-controls="profile" role="tab" data-toggle="tab">Response <code>200</code></a>
+                            <a href="#user-user-retrieve-a-user-response-200" aria-controls="user-user-retrieve-a-user-response-200" role="tab"
+                               data-toggle="tab">Response <code>200</code></a>
                         </li>
                                             <li role="presentation">
-                            <a href="#user-user-retrieve-a-user-response-404" aria-controls="profile" role="tab" data-toggle="tab">Response <code>404</code></a>
+                            <a href="#user-user-retrieve-a-user-response-404" aria-controls="user-user-retrieve-a-user-response-404" role="tab"
+                               data-toggle="tab">Response <code>404</code></a>
                         </li>
                                     </ul>
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="user-user-retrieve-a-user-request">
-                                                    <p><strong>Headers</strong></p>
-                            <pre><code class="hljs http"><span class="hljs-attribute">Authorization</span>: JWT &lt;token&gt;<br></code></pre>
-                                            </div>
+                        <p><strong>Headers</strong></p>
+    <pre><code>Authorization: JWT &lt;token&gt;<br></code></pre>
+                    </div>
                                             <div role="tabpanel" class="tab-pane" id="user-user-retrieve-a-user-response-200">
-                                                            <p><strong>Headers</strong></p>
-                                <pre><code class="hljs http"><span class="hljs-attribute">Content-Type</span>: application/json<br></code></pre>
-                                                                                        <p><strong>Body</strong></p>
-                                <pre><code class="hljs json">{
-  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"a6vhAo3FG7t1"</span>,
-  <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2016-07-01T15:11:09.553Z"</span>,
-  <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2016-07-01T15:11:09.553Z"</span>,
-  <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john.doe@mail.com"</span>,
-  <span class="hljs-attr">"facebookId"</span>: <span class="hljs-number">888047057953991</span>,
-  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John"</span>,
-  <span class="hljs-attr">"surname"</span>: <span class="hljs-string">"Doe"</span>,
-  <span class="hljs-attr">"avatar"</span>: <span class="hljs-literal">null</span>
+                            <p><strong>Headers</strong></p>
+    <pre><code>Content-Type: application/json<br></code></pre>
+    <p><strong>Body</strong></p>
+    <pre><code>{
+  &quot;id&quot;: &quot;a6vhAo3FG7t1&quot;,
+  &quot;createdAt&quot;: &quot;2016-07-01T15:11:09.553Z&quot;,
+  &quot;updatedAt&quot;: &quot;2016-07-01T15:11:09.553Z&quot;,
+  &quot;email&quot;: &quot;john.doe@mail.com&quot;,
+  &quot;facebookId&quot;: 888047057953991,
+  &quot;name&quot;: &quot;John&quot;,
+  &quot;surname&quot;: &quot;Doe&quot;,
+  &quot;avatar&quot;: null
 }</code></pre>
-                                                                                        <p><strong>Schema</strong></p>
-                                <pre><code class="hljs json">{
-  <span class="hljs-attr">"$schema"</span>: <span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span>,
-  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
-  <span class="hljs-attr">"properties"</span>: {
-    <span class="hljs-attr">"id"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"enum"</span>: [
-        <span class="hljs-string">"a6vhAo3FG7t1"</span>
+    <p><strong>Schema</strong></p>
+    <pre><code>{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;id&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;enum&quot;: [
+        &quot;a6vhAo3FG7t1&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Short non-sequential url-friendly unique id."</span>
+      &quot;description&quot;: &quot;Short non-sequential url-friendly unique id.&quot;
     },
-    <span class="hljs-attr">"createdAt"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"ISO Date/time string. When this resource was created."</span>
+    &quot;createdAt&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;ISO Date/time string. When this resource was created.&quot;
     },
-    <span class="hljs-attr">"updatedAt"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"ISO Date/time string. When this resource was last updated."</span>
+    &quot;updatedAt&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;ISO Date/time string. When this resource was last updated.&quot;
     },
-    <span class="hljs-attr">"email"</span>: {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Login. Unique email address of the user."</span>
+    &quot;email&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;Login. Unique email address of the user.&quot;
     },
-    <span class="hljs-attr">"facebookId"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"number"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;facebookId&quot;: {
+      &quot;type&quot;: [
+        &quot;number&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Facebook ID of the user if user account is linked to the Facebook account."</span>
+      &quot;description&quot;: &quot;Facebook ID of the user if user account is linked to the Facebook account.&quot;
     },
-    <span class="hljs-attr">"name"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;name&quot;: {
+      &quot;type&quot;: [
+        &quot;string&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"First name of the user."</span>
+      &quot;description&quot;: &quot;First name of the user.&quot;
     },
-    <span class="hljs-attr">"surname"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;surname&quot;: {
+      &quot;type&quot;: [
+        &quot;string&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Last name of the user."</span>
+      &quot;description&quot;: &quot;Last name of the user.&quot;
     },
-    <span class="hljs-attr">"avatar"</span>: {
-      <span class="hljs-attr">"type"</span>: [
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
+    &quot;avatar&quot;: {
+      &quot;type&quot;: [
+        &quot;string&quot;,
+        &quot;null&quot;
       ],
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"URL to user avatar."</span>
+      &quot;description&quot;: &quot;URL to user avatar.&quot;
     }
   },
-  <span class="hljs-attr">"required"</span>: [
-    <span class="hljs-string">"id"</span>,
-    <span class="hljs-string">"email"</span>
+  &quot;required&quot;: [
+    &quot;id&quot;,
+    &quot;email&quot;
   ]
 }</code></pre>
-                                                    </div>
+                        </div>
                                             <div role="tabpanel" class="tab-pane" id="user-user-retrieve-a-user-response-404">
-                                                                                                            </div>
+                            <p><strong>This has no content.</strong></p>
+                        </div>
                                     </div>
             </div>
         </div>
-    </div>            </div>
+    </div>
+            </div>
 </div>                            </div>
-        <object style="display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%;overflow: hidden; pointer-events: none; z-index: -1;" type="text/html"></object></div>
+        </div>
     </div>
 </div>
 
