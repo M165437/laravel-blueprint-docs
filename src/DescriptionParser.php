@@ -43,7 +43,7 @@ class DescriptionParser extends Parsedown
 
     /**
      * Get headings from parsed markdown.
-     * 
+     *
      * @return array
      */
     public function getHeadings()
@@ -61,7 +61,11 @@ class DescriptionParser extends Parsedown
     protected function element(array $Element)
     {
         if ($this->isHeader($Element)) {
-            $Element['attributes']['id'] = 'description-' . str_slug($Element['text'], '-');
+            $Element['attributes']['id'] = sprintf(
+                'description-%s-%d',
+                str_slug($Element['text'], '-'),
+                count($this->headings)
+            );
             $Element['level'] = $Element['name'][1];
             array_push($this->headings, $Element);
         }

@@ -1,9 +1,9 @@
 <div class="panel panel-default panel-action">
     <div class="panel-heading">
         <h4 class="panel-title" id="{{ $action->elementId }}">
-            <div class="method {{ $action->methodLower }}">{{ $action->method }}</div>
+            <span class="method {{ $action->methodLower }}">{{ $action->method }}</span>
             <code class="uri">{!! urldecode($action->uriTemplate) !!}</code>
-            <div class="name">{{ $action->name }}</div>
+            <span class="name">{{ $action->name }}</span>
         </h4>
     </div>
     <div class="panel-body">
@@ -26,11 +26,11 @@
             <div class="transaction">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li role="presentation" class="">
-                        <a href="{{ $action->elementLink }}-request" aria-controls="home" role="tab" data-toggle="tab">Request</a>
+                        <a href="{{ $action->elementLink }}-request" aria-controls="{{ $action->elementId }}-request" role="tab" data-toggle="tab">Request</a>
                     </li>
                     @foreach($action->examples->pluck('response') as $response)
                         <li role="presentation">
-                            <a href="{{ $action->elementLink }}-response-{{ $response->statusCode }}" aria-controls="profile" role="tab"
+                            <a href="{{ $action->elementLink }}-response-{{ $response->statusCode }}" aria-controls="{{ $action->elementId }}-response-{{ $response->statusCode }}" role="tab"
                                data-toggle="tab">Response <code>{{ $response->statusCode }}</code></a>
                         </li>
                     @endforeach
