@@ -56,6 +56,14 @@ php artisan vendor:publish --provider="M165437\BlueprintDocs\BlueprintDocsServic
 
 Find your documentation at route `/api-documentation`.
 
+## Update
+
+When you update this package, you might need to republish its assets (note the added parameter `--force`):
+
+```bash
+php artisan vendor:publish --provider="M165437\BlueprintDocs\BlueprintDocsServiceProvider" --tag="public" --force
+```
+
 ## Configuration
 
 To adjust Blueprint Docs' configuration, publish its config file to `config/blueprintdocs.php`:
