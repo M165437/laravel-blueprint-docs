@@ -4,7 +4,7 @@ When wanting to contribute to this repository, please first
 
 * discuss the change you wish to make via issue,
 email, or any other method with the owners of this repository,
-* follow this excelent tutorial on [How To Create a Pull Request on GitHub](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github) and
+* follow this excellent tutorial on [How To Create a Pull Request on GitHub](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github) and
 * acknowledge our Code of Conduct in all your interactions with the project.
 
 ## Code of Conduct
