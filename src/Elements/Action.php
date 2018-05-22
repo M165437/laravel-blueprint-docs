@@ -60,10 +60,14 @@ class Action extends Base
     /**
      * Map method
      *
-     * @return \Illuminate\Support\Collection
+     * @return string
      */
     private function mapMethod()
     {
+        if(! isset($this->reynaldo->getHttpTransactions()[0])) {
+            return '';
+        }
+
         return $this->reynaldo->getHttpTransactions()[0]->getHttpRequest()->getMethod();
     }
 
