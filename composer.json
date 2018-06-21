@@ -27,7 +27,7 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "~5.4.0|~5.5.0|~5.6.0",
-        "hmaus/drafter-php": "dev-symfony-v4",
+        "hmaus/drafter-php": "~4.0|dev-master",
         "hmaus/reynaldo": "^0.1.3",
         "erusev/parsedown": "^1.6",
         "erusev/parsedown-extra": "^0.7.1"
