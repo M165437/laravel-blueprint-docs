@@ -81,7 +81,7 @@ class BlueprintDocs
     /**
      * Get BlueprintDocs api object for rendering
      *
-     * @return \M165437\Elements\Api
+     * @return Api
      */
     public function getApi()
     {

@@ -41,6 +41,11 @@ class Action extends Base
      */
     public $colorizedUriTemplate;
 
+	/**
+	 * @var \Illuminate\Support\Collection|Attribute[]
+	 */
+	public $attributes;
+
     /**
      * Setup element variables
      *
@@ -55,6 +60,7 @@ class Action extends Base
         $this->examples = $this->mapExamples();
         $this->uriTemplate = $this->mapUriTemplate();
         $this->colorizedUriTemplate = $this->mapColorizedUriTemplate();
+	    $this->attributes = $this->mapAttributes();
     }
 
     /**
@@ -89,6 +95,34 @@ class Action extends Base
                 return new HrefVariable($reynaldoHrefVariablesElement, $this);
             });
     }
+
+	/**
+	 * Map attributes
+	 *
+	 * @return Collection
+	 */
+	private function mapAttributes()
+	{
+		$data = $this->reynaldo->getAttribute('data');
+		if (
+			!$data ||
+			!isset($data['element']) ||
+			$data['element'] != 'dataStructure' ||
+			!isset($data['content'][0]['element']) ||
+			$data['content'][0]['element'] != 'object'
+		)
+		{
+			return new Collection();
+		}
+
+		return (new Collection($data['content'][0]['content']))
+			->filter(function(array $data) {
+				return isset($data['element']) && $data['element'] == 'member';
+			})
+			->map(function (array $attribute) {
+				return new Attribute($attribute, $this);
+			});
+	}
 
     /**
      * Map request and response examples

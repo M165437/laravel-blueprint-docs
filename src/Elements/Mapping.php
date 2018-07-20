@@ -37,7 +37,7 @@ abstract class Mapping
      * @return mixed
      * @throws Exception
      */
-    protected function findParent(string $parentClassName)
+    protected function findParent($parentClassName)
     {
         $class = $this;
 
