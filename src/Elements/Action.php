@@ -113,7 +113,10 @@ class Action extends Base
      */
     private function mapUriTemplate()
     {
-        return $this->modifyUriTemplate($this->parent->reynaldo->getHref(), $this->parameters, false);
+        $attributeUri = $this->reynaldo->getAttribute('href');
+        $uri = $attributeUri !== null ? $attributeUri : $this->parent->reynaldo->getHref();
+
+        return $this->modifyUriTemplate($uri, $this->parameters, false);
     }
 
     /**
@@ -123,7 +126,10 @@ class Action extends Base
      */
     private function mapColorizedUriTemplate()
     {
-        return $this->modifyUriTemplate($this->parent->reynaldo->getHref(), $this->parameters, true);
+        $attributeUri = $this->reynaldo->getAttribute('href');
+        $uri = $attributeUri !== null ? $attributeUri : $this->parent->reynaldo->getHref();
+
+        return $this->modifyUriTemplate($uri, $this->parameters, true);
     }
 
     /**

@@ -63,7 +63,7 @@ class HrefVariable extends Mapping
      */
     public function setup()
     {
-        $this->name = $this->reynaldo->name;
+        $this->name = urldecode($this->reynaldo->name);
         $this->description = $this->reynaldo->description;
         $this->descriptionHtml = resolve('Parsedown')->parse($this->reynaldo->description);
         $this->type = $this->reynaldo->dataType;
