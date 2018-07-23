@@ -20,6 +20,10 @@
         @if ($action->parameters->count())
             @include ('blueprintdocs::parameters')
         @endif
+
+        @if ($action->attributes->count())
+            @include ('blueprintdocs::attributes')
+        @endif
     </div>
     @if ($action->examples->count())
         <div class="panel-footer">
