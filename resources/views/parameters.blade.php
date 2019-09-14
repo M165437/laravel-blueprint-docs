@@ -5,8 +5,8 @@
     <table>
         <thead>
         <tr>
-            <th></th>
-            <th></th>
+            <th>Parameter</th>
+            <th>Description</th>
         </tr>
         </thead>
         <tbody>
