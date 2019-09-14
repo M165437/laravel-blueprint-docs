@@ -17,7 +17,7 @@
                 </td>
                 <td>
                     <p>
-                        <code>string</code>
+                        <code>{{$parameter->type}}</code>
                         @if ($parameter->required)
                             &nbsp;({{ $parameter->required }})
                         @endif
