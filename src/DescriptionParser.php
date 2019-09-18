@@ -2,6 +2,7 @@
 
 namespace M165437\BlueprintDocs;
 
+use Illuminate\Support\Str;
 use Parsedown;
 
 class DescriptionParser extends Parsedown
@@ -63,7 +64,7 @@ class DescriptionParser extends Parsedown
         if ($this->isHeader($Element)) {
             $Element['attributes']['id'] = sprintf(
                 'description-%s-%d',
-                str_slug($Element['text'], '-'),
+                Str::slug($Element['text'], '-'),
                 count($this->headings)
             );
             $Element['level'] = $Element['name'][1];
