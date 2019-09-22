@@ -2,6 +2,8 @@
 
 namespace M165437\BlueprintDocs\Elements;
 
+use Illuminate\Support\Str;
+
 abstract class Base extends Mapping
 {
     /**
@@ -57,10 +59,10 @@ abstract class Base extends Mapping
     private function mapElementId()
     {
         $class = $this;
-        $elementId = str_slug($this->name, '-');
+        $elementId = Str::slug($this->name, '-');
 
         while ($parent = $class->parent) {
-            $elementId = str_slug($parent->name, '-') . '-' . $elementId;
+            $elementId = Str::slug($parent->name, '-') . '-' . $elementId;
             $class = $parent;
         }
 
