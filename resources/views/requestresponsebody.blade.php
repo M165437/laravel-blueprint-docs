@@ -1,3 +1,11 @@
+@if (isset($requestresponse->title))
+    <p><strong>Title</strong></p>
+    {{ $requestresponse->title }}
+@endif
+@if (isset($requestresponse->description))
+    <p><strong>Description</strong></p>
+    {{ $requestresponse->description }}
+@endif
 @if ($requestresponse->headers->count())
     <p><strong>Headers</strong></p>
     <pre><code>@foreach($requestresponse->headers as $key => $value){{ $key . ': ' . $value }}<br>@endforeach</code></pre>

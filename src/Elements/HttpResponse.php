@@ -36,6 +36,11 @@ class HttpResponse extends Mapping
      */
     public $hasContent;
 
+	/**
+	 * @var string
+	 */
+    public $description;
+
     /**
      * Response constructor
      *
@@ -61,6 +66,7 @@ class HttpResponse extends Mapping
         $this->messageBodySchema = $this->mapMessageBodySchema();
         $this->dataStructure = $this->reynaldo->getDataStructure();
         $this->hasContent = $this->headers->count() || $this->messageBody || $this->messageBodySchema;
+	    $this->description = $this->reynaldo->getCopyText();
     }
 
     /**
