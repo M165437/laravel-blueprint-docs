@@ -36,6 +36,16 @@ class HttpRequest extends Mapping
      */
     public $hasContent;
 
+	/**
+	 * @var string
+	 */
+	public $title;
+
+    /**
+     * @var string
+     */
+    public $description;
+
     /**
      * Request constructor
      *
@@ -61,6 +71,8 @@ class HttpRequest extends Mapping
         $this->messageBody = $this->mapMessageBody();
         $this->messageBodySchema = $this->mapMessageBodySchema();
         $this->hasContent = $this->headers->count() || $this->messageBody || $this->messageBodySchema;
+	    $this->title = $this->reynaldo->getTitle();
+        $this->description = $this->reynaldo->getCopyText();
     }
 
     /**
